@@ -1,3 +1,4 @@
+using System.Dynamic;
 using System.Runtime.ExceptionServices;
 using System.Net.WebSockets;
 using System;
@@ -5,9 +6,13 @@ using System;
 public class ProgramUI {
     public static TJ currentPlayer = new TJ();
     public void Run(){
-        
         RunMenu();
-        Encounters.FirstEncounter();
+        
+        Encounters.Boss1();
+        Encounters.FinalBoss();
+        // Second Encounter
+        // Second Encounter
+        // Second Encounter
     }
 
     public void RunMenu() {
@@ -30,7 +35,7 @@ public class ProgramUI {
     "1. Charge!\n" +
     "2. Zzzzzz");
     string selection = Console.ReadLine();
-    if (selection == "1"){
+    if (selection == "1") {
     
     Console.WriteLine("Uncertain yet determined, you tighten your gi, strap a Power Pole to your side," + 
     "and set your dreads in place before speeding down the hill towards your quarry.");
@@ -59,6 +64,9 @@ public class ProgramUI {
         public int armorValue = 0;
         public int potion = 5;
         public int weaponValue = 1;
+
+        public int dragonball = 0;
+        //Needs 7 Dragon Balls to end humanity
     }
 
 // private void WaitForKey() {
@@ -75,28 +83,61 @@ public class ProgramUI {
         //Encounter Generic
         
         //Encounters
-        public static void FirstEncounter() {
+        public static void Boss1() {
             Console.WriteLine("As you approach you quickly realize you were right to come here.\n" +
             "The thing you saw is Android 13! The muscle bound menace with a baseball cap made by the evil Dr.Gero!");
             Console.ReadKey();
             Console.WriteLine($"You square your jaw and set your gaze directly at Android 13. Daring him to take you on!");
             Console.ReadKey();
-            Combat(false, "Android 13", 1, 4);
+            Combat("Android 13", 1, 4);
+        }
+
+        public static void Boss2() {
+            Console.WriteLine("yo");
+            // Console.ReadKey();
+            // Console.WriteLine($"You square your jaw and set your gaze directly at Android 13. Daring him to take you on!");
+            // Console.ReadKey();
+            Combat("Android 15", 3, 12); //name, attack value, health.
+        }
+        public static void Boss3() {
+            // Encounter description Console.WriteLine();
+            // Console.ReadKey();
+            // Console.WriteLine($"You square your jaw and set your gaze directly at Android 13. Daring him to take you on!");
+            // Console.ReadKey();
+            Combat("Android 13", 9, 4); //name, attack value, health.
+        }
+        public static void Boss4() {
+            // Encounter description Console.WriteLine();
+            // Console.ReadKey();
+            // Console.WriteLine($"You square your jaw and set your gaze directly at Android 13. Daring him to take you on!");
+            // Console.ReadKey();
+            Combat("Android 13", 1, 4); //name, attack value, health.
+        }
+        
+        
+        public static void FinalBoss() {
+            // Encounter description Console.WriteLine();
+            // Console.ReadKey();
+            // Console.WriteLine($"You square your jaw and set your gaze directly at Android 13. Daring him to take you on!");
+            // Console.ReadKey();
+            Combat("Android 13", 1, 4); //name, attack value, health.
+            System.Console.WriteLine("The boss being defeated you glance to the sky and see a majestic dragon.");
+            System.Console.WriteLine("\"Greetings TJ! You have collected all of my ballz. As your reward for handling them with care and honor, I bestow but one wish. An all powerful wish that can grant you anything you desire.\"");
+            System.Console.WriteLine("\"Now then, what shall it be?!\"");
+            string wish = System.Console.ReadLine();
+            System.Console.WriteLine($"\"Hmmm. Rather odd request but I shall grant it none the less.\"");
         }
         
         //Encounter Tools
-        public static void Combat(bool random, string name, int power, int health) {
+        public static void Combat(string name, int power, int health) {
             string n = "";
             int p = 0;
             int h = 0;
+        
+            n = name;
+            p = power;
+            h = health;
             
-            if (random){
-
-            } else {
-                n = name;
-                p = power;
-                h = health;
-            }
             while (h > 0 ) {
                 Console.Clear();
                 Console.WriteLine(n);
@@ -136,7 +177,7 @@ public class ProgramUI {
                     ProgramUI.currentPlayer.health -= damage;
                     h -= attack;
                 }
-                else if(input.ToLower() == "E" || input.ToLower() == "Exit"){
+                else if(input.ToLower() == "e" || input.ToLower() == "exit"){
                     //Exit
                     h = 0;
                 }
@@ -176,6 +217,9 @@ public class ProgramUI {
                 }
                 Console.ReadKey();
                 }
+            Console.WriteLine($"\"AGHAHHHH! How could this be!? Thwarted by a grubby little peon like you!?\" {n} yells in defeat as you brush the dust off your sleeve.");
+            Console.WriteLine("As you look down your nose at the crumpled mess of a monster below you, you can't help but feel your ego swell to even greater heights.");
+            Console.Clear();
             }
         }
     }
