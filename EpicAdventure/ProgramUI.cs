@@ -93,7 +93,7 @@ public class ProgramUI {
             Console.ReadKey();
             Console.WriteLine($"You square your jaw and set your gaze directly at Android 13. Daring him to take you on!");
             Console.ReadKey();
-            Combat("Android 13", 2000, 4);
+            Combat("Android 13", 1, 4);
             Console.WriteLine($"\"AGHAHHHH! How could this be!? Thwarted by a grubby little peon like you!?\" Android 13 yells in defeat as you brush the dust off your sleeve.");
             Console.WriteLine("As you look down your nose at the crumpled mess of a monster below you, you can't help but feel your ego swell to even greater heights.");
             Console.Clear();
@@ -105,11 +105,12 @@ public class ProgramUI {
             System.Console.WriteLine("You quickly realize its another Android heading your way");
             Console.ReadKey();
             System.Console.WriteLine($"You swoop to the left, dodging his attack. \"Are we really going to do this?\" you ask, obviously annoyed.");
-            System.Console.WriteLine($"As he's gathering his balance he lets out a guttural scream \"Fight me and PERISH!\"");
+            System.Console.WriteLine($"As he's gathering his balance he lets out a gutteral scream \"Fight me and PERISH!\"");
             Console.ReadKey();
-            Combat("Android 15", 3, 8);
-            System.Console.WriteLine("Android 15 sputters unintelligibly, reaching his hand out, grasping the empty air around him as if it was his last chance of survival.");
+            Combat("Android 15", 3, 8); 
+            System.Console.WriteLine("Android 15 sputters unitelligibly, reaching his hand out, grasping the empty air around him as if it was his last chance of survival.");
             System.Console.WriteLine($"\"You should've known you'd be no match for me, Android.\" you snide, sauntering away zealously.");
+
         }
         public static void Boss3() {
             // Encounter description Console.WriteLine();
@@ -178,7 +179,7 @@ public class ProgramUI {
                     damage = 0;} 
                     int attack = rand.Next(0, ProgramUI.currentPlayer.weaponValue) + rand.Next(1,4);
                     
-                    Console.WriteLine($"You swipe horizontally with your Power Pole! Delivering a staggering blow that deals {attack}");
+                    Console.WriteLine($"You swipe horizontally with your Power Pole! Delivering a staggering blow that deals {damage}");
                     Console.WriteLine($"{n} follows up with their own attack!    You lose {damage} health");
                     ProgramUI.currentPlayer.health -= damage;
                     h -= attack;
@@ -235,11 +236,12 @@ public class ProgramUI {
                 }
                 Console.ReadKey();
                 }
-            if (ProgramUI.currentPlayer.health <= 0){
-                System.Console.WriteLine("You slump to your knees in defeat. Looking up defiantly as the final blow is speeding towards you, you think to yourself, \"Man, I should have just gone back to sleep.\"");
-                Console.ReadKey();
-                System.Environment.Exit(0);
-            }
+                if (ProgramUI.currentPlayer.health <= 0)
+                {
+                    //Death code
+                    System.Console.WriteLine($"Dealing the final blow, {n} cackles violently. \"You have been DEFEATED!\"");
+                    Console.ReadKey();
+                }
             }
         }
     }
