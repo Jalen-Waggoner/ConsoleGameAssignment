@@ -5,21 +5,25 @@ using System;
 
 public class ProgramUI {
     public static TJ currentPlayer = new TJ();
+
+    static Random rand;
     public void Run(){
+        rand = new Random(DateTime.Now.Millisecond);
         RunMenu();
         
         Encounters.Boss1();
+        Encounters.Boss2();
+        Encounters.Boss3();
+        Encounters.Boss4();
         Encounters.FinalBoss();
-        // Second Encounter
-        // Second Encounter
-        // Second Encounter
+        // Other Encounters
     }
 
     public void RunMenu() {
     
     Console.Clear();
     Console.WriteLine("---------------Welcome to DragonBall TJ---------------\n" +
-    "  Press any key to embark on this tale for the ages!");
+    "Press any key to embark on this tale for the ages!");
     Console.ReadKey();
     Console.Clear();
     Console.WriteLine("You wake up from an amazing nap atop a grassy knoll.");
@@ -45,9 +49,9 @@ public class ProgramUI {
         Console.ReadKey();
         Console.WriteLine("Whatever it was at the bottom of the hill couldn't have been THAT important...");
         Console.ReadKey();
-        System.Console.WriteLine("All of a sudden, you hear a CRASH coming from the direction of the anomaly!");
+        Console.WriteLine("All of a sudden, you hear a CRASH coming from the direction of the anomaly!");
         Console.ReadKey();
-        System.Console.WriteLine("Frustrated, you exclaim \"I can't sleep with all that ruckus!\" and you reluctantly get up with a yawn to investigate further.");
+        Console.WriteLine("Frustrated, you exclaim \"I can't sleep with all that ruckus!\" and you reluctantly get up with a yawn to investigate further.");
     } 
     else {
         Console.WriteLine("Please input a valid option.");
@@ -79,8 +83,8 @@ public class ProgramUI {
 // }
     public class Encounters
     {
-        static Random rand = new Random();
-        //Encounter Generic
+        
+
         
         //Encounters
         public static void Boss1() {
@@ -90,28 +94,37 @@ public class ProgramUI {
             Console.WriteLine($"You square your jaw and set your gaze directly at Android 13. Daring him to take you on!");
             Console.ReadKey();
             Combat("Android 13", 1, 4);
+            Console.WriteLine($"\"AGHAHHHH! How could this be!? Thwarted by a grubby little peon like you!?\" Android 13 yells in defeat as you brush the dust off your sleeve.");
+            Console.WriteLine("As you look down your nose at the crumpled mess of a monster below you, you can't help but feel your ego swell to even greater heights.");
+            Console.Clear();
         }
 
         public static void Boss2() {
-            Console.WriteLine("yo");
-            // Console.ReadKey();
-            // Console.WriteLine($"You square your jaw and set your gaze directly at Android 13. Daring him to take you on!");
-            // Console.ReadKey();
-            Combat("Android 15", 3, 12); //name, attack value, health.
+            Console.WriteLine("Looking into the distance, you see something coming towards you at great speed.");
+            System.Console.WriteLine($"\"A bird?\" you think... \"Maybe a plane?\"");
+            System.Console.WriteLine("You quickly realize its another Android heading your way");
+            Console.ReadKey();
+            System.Console.WriteLine($"You swoop to the left, dodging his attack. \"Are we really going to do this?\" you ask, obviously annoyed.");
+            System.Console.WriteLine($"As he's gathering his balance he lets out a gutteral scream \"Fight me and PERISH!\"");
+            Console.ReadKey();
+            Combat("Android 15", 3, 8);
+            System.Console.WriteLine("Android 15 sputters unitelligibly, reaching his hand out, grasping the empty air around him as if it was his last chance of survival.");
+            System.Console.WriteLine($"\"You should've known you'd be no match for me, Android.\" you snide, sauntering away zealously.");
+
         }
         public static void Boss3() {
             // Encounter description Console.WriteLine();
             // Console.ReadKey();
             // Console.WriteLine($"You square your jaw and set your gaze directly at Android 13. Daring him to take you on!");
             // Console.ReadKey();
-            Combat("Android 13", 9, 4); //name, attack value, health.
+            Combat("Android 17", 9, 16); //name, attack value, health.
         }
         public static void Boss4() {
             // Encounter description Console.WriteLine();
             // Console.ReadKey();
             // Console.WriteLine($"You square your jaw and set your gaze directly at Android 13. Daring him to take you on!");
             // Console.ReadKey();
-            Combat("Android 13", 1, 4); //name, attack value, health.
+            Combat("Android 21", 27, 32); //name, attack value, health.
         }
         
         
@@ -120,12 +133,18 @@ public class ProgramUI {
             // Console.ReadKey();
             // Console.WriteLine($"You square your jaw and set your gaze directly at Android 13. Daring him to take you on!");
             // Console.ReadKey();
-            Combat("Android 13", 1, 4); //name, attack value, health.
+            Combat("Vegeta", 135, 128); //name, attack value, health.
             System.Console.WriteLine("The boss being defeated you glance to the sky and see a majestic dragon.");
             System.Console.WriteLine("\"Greetings TJ! You have collected all of my ballz. As your reward for handling them with care and honor, I bestow but one wish. An all powerful wish that can grant you anything you desire.\"");
             System.Console.WriteLine("\"Now then, what shall it be?!\"");
             string wish = System.Console.ReadLine();
+            if (rand.Next() * 100 <= 33) {
             System.Console.WriteLine($"\"Hmmm. Rather odd request but I shall grant it none the less.\"");
+            } else if (rand.Next() * 100 <= 66) {
+            System.Console.WriteLine($"\"Well, thats not something I'd wish for, but so be it.\"");
+            } else if (rand.Next() * 100 <= 99) {
+            System.Console.WriteLine($"\"As you wish, weirdo!\"");
+            }
         }
         
         //Encounter Tools
@@ -217,9 +236,6 @@ public class ProgramUI {
                 }
                 Console.ReadKey();
                 }
-            Console.WriteLine($"\"AGHAHHHH! How could this be!? Thwarted by a grubby little peon like you!?\" {n} yells in defeat as you brush the dust off your sleeve.");
-            Console.WriteLine("As you look down your nose at the crumpled mess of a monster below you, you can't help but feel your ego swell to even greater heights.");
-            Console.Clear();
             }
         }
     }
