@@ -34,7 +34,7 @@ public class Encounters
             System.Console.WriteLine($"You swoop to the left, dodging his attack. \"Are we really going to do this?\" you ask, obviously annoyed.");
             System.Console.WriteLine($"As he's gathering his balance he lets out a guttural scream \"Fight me and PERISH!\"");
             Console.ReadKey();
-            Combat(false, "Android 15", 3, 8);
+            Combat(false, "Android 15", 20, 8);
             System.Console.WriteLine("Android 15 sputters unintelligibly, reaching his hand out, grasping the empty air around him as if it was his last chance of survival.");
             System.Console.WriteLine($"\"You should've known you'd be no match for me, Android.\" you snide, sauntering away zealously.");
         }

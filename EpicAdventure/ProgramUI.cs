@@ -10,22 +10,34 @@ public class ProgramUI {
         bool continueToRun = true;
         RunMenu();
         
-        Encounters.Boss1();
-        if (ProgramUI.currentPlayer.health <= 0){
-            continueToRun = false;
-        }
         while(continueToRun){
+        Encounters.Boss1();
+        if (ProgramUI.currentPlayer.health <= 0)
+            continueToRun = false;
+        Shop.LoadShop(ProgramUI.currentPlayer);
             var result = location.Menu();
+            if (ProgramUI.currentPlayer.health <= 0)
+            continueToRun = false;
 
-            Encounters.RandomEncounter();
+        Encounters.Boss2();
+            if (ProgramUI.currentPlayer.health <= 0)
+            continueToRun = false;
+        Shop.LoadShop(ProgramUI.currentPlayer);
+    
+        Encounters.Boss3();
+            if (ProgramUI.currentPlayer.health <= 0)
+            continueToRun = false;
+        Shop.LoadShop(ProgramUI.currentPlayer);
 
-            Encounters.Boss2();
+        Encounters.Boss4();
+            if (ProgramUI.currentPlayer.health <= 0)
+            continueToRun = false;
+        Shop.LoadShop(ProgramUI.currentPlayer);
 
-            Encounters.Boss3();
-
-            Encounters.Boss4();
-
-            Encounters.FinalBoss();}
+        Encounters.FinalBoss();}
+            if (ProgramUI.currentPlayer.health <= 0)
+            continueToRun = false;
+        Shop.LoadShop(ProgramUI.currentPlayer);
             // Other Encounters
     }
 
@@ -33,23 +45,23 @@ public class ProgramUI {
     bool selectionNeeded = true;
 
     Console.Clear();
-    Console.WriteLine("---------------Welcome to DragonBall TJ---------------\n" +
-    "Press any key to embark on this tale for the ages!");
+    Print("---------------Welcome to DragonBall TJ---------------\n" +
+    "Press any key to embark on this tale for the ages!", 60);
     Console.ReadKey();
     Console.Clear();
-    Console.WriteLine("You wake up from an amazing nap atop a grassy knoll.");
+    Print("You wake up from an amazing nap atop a grassy knoll.", 60);
     Console.ReadKey();
-    Console.WriteLine("\"Wow\" you think to yourself, \"That was great! I really need to do that more often!\"");
+    Print("\"Wow\" you think to yourself, \"That was great! I really need to do that more often!\"", 60);
     Console.ReadKey();
-    Console.WriteLine("Wiping the sleep from your eyes you peer out across the valley below and something catches your eye.");
+    Print("Wiping the sleep from your eyes you peer out across the valley below and something catches your eye.", 60);
     Console.ReadKey();
-    Console.WriteLine("\"Odd. Could that be? No surely it couldn't. Unless?\"");
+    Print("\"Odd. Could that be? No surely it couldn't. Unless?\"", 60);
     Console.ReadKey();
 
     while(selectionNeeded) {
-    Console.WriteLine("Do you go to inspect the anomaly or lay back down for another nap?\n" +
+    Print("Do you go to inspect the anomaly or lay back down for another nap?\n" + 
     "1. Charge!\n" +
-    "2. Zzzzzz");
+    "2. Zzzzzz", 40);
     string selection = Console.ReadLine();
     if (selection == "1") {
     
@@ -75,6 +87,13 @@ public class ProgramUI {
     }
     Console.ReadKey();
     Console.Clear();
+}
+public static void Print(string text, int  textdelay = 40){
+    foreach (char c in text){
+        Console.Write(c);
+        System.Threading.Thread.Sleep(textdelay);
+    }
+    System.Console.WriteLine();
 }
     
         }
