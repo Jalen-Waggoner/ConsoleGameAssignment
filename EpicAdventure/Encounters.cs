@@ -5,6 +5,7 @@ public class Encounters
 
         
         public static void RandomEncounter() {
+            Console.Clear();
             Print("While exploring you some rustling and glance behind you to see a flick of movement.");
             Console.ReadKey();
             Print("\"Come on out so that we can be done with this! I have Dragon Balls to collect!\" you taunt in the direction of the noise.");
@@ -129,7 +130,7 @@ public class Encounters
                 "You wonder again what is keeping you from peacful rest, so you head to the east to investigate.\n" + 
                 "You see a shop up ahead.");
                 Print("Do you want to...\n" +
-                "1. Enter the shop? Or...\n" +
+                "1. Enter the shop?\n" +
                 "2. Keep searching for a quiet oasis to take your nap?");
 
                 string selection = Console.ReadLine();

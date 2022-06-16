@@ -70,7 +70,7 @@ using System;
                 Console.ReadLine();
                 Print("You lightly chuckle to yourself at the irony of Mr.Lao's last statement, loudly thank him for his services, and exit the shop.");
                 Console.ReadLine();
-                break;
+                //break;
             }
             static void TryBuy(string item, int cost, TJ tj){
                 if(tj.coins >= cost){
