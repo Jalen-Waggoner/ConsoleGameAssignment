@@ -7,8 +7,6 @@ public class ProgramUI {
     public static TJ currentPlayer = new TJ();
     public void Run(){
         bool continueToRun = true;
-        RunMenu();
-        
         while(continueToRun){
         Encounters.Boss1();
             if (ProgramUI.currentPlayer.health <= 0)
@@ -17,6 +15,7 @@ public class ProgramUI {
         Encounters.Valley(); // has dragonball
             if (ProgramUI.currentPlayer.health <= 0)
             continueToRun = false;
+        RunMenu();
 
         Encounters.RandomEncounter();
             if (ProgramUI.currentPlayer.health <= 0)
@@ -145,7 +144,7 @@ public class ProgramUI {
     Console.ReadKey();
     Console.Clear();
 
-     
+
 }
     public static void Print(string text, int  textdelay = 40){
         foreach (char c in text){
