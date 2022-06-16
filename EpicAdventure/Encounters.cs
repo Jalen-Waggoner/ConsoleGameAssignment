@@ -493,7 +493,7 @@ System.Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠉⠀⠀⠀⠀⠀
                 Console.WriteLine("| (H)eal   (R)un  |");
                 Console.WriteLine("===================");
                 Console.WriteLine($" Potions: {ProgramUI.currentPlayer.potion}  Health: {ProgramUI.currentPlayer.health}");
-                System.Console.WriteLine("(E)xit");
+                // System.Console.WriteLine("(E)xit");
 
                 
                 string input = Console.ReadLine();
@@ -523,10 +523,10 @@ System.Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠉⠀⠀⠀⠀⠀
                     ProgramUI.currentPlayer.health -= damage;
                     h -= attack;
                 }
-                else if(input.ToLower() == "e" || input.ToLower() == "exit"){
-                    //Exit
-                    h = 0;
-                }
+                // else if(input.ToLower() == "e" || input.ToLower() == "exit"){
+                //     //Exit
+                //     h = 0;
+                // }
                 
                 else if(input.ToLower() == "h" || input.ToLower() == "heal"){
                     //Heal

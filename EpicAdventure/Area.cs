@@ -25,17 +25,18 @@ public class Area {
                     while(case1ContinueToRun){
                         int jumpSuccess = rand.Next(1, 100);
                         Console.Clear();
-                        Console.WriteLine("You travel for about an hour until you come to a river with a dilapidated bridge.\n" +
+                        ProgramUI.Print("You travel for about an hour until you come to a river with a dilapidated bridge.\n" +
                         "Do you try and cross it?\n" +
                         "1. Hell Yeah!\n" +
                         "2. Hell Nah!\n");
                         string caseInput1 = Console.ReadLine();
                         
                         if(caseInput1 == "1"){
-                            if (jumpSuccess <= 30){
+                            if (jumpSuccess <= 100){
                                 Console.Clear();
-                                ProgramUI.Print("You only make it half way across when the wooden planks fall out from under you. " +
+                                ProgramUI.Print("You only make it half way across when one of the wooden planks falls out from under you... \n" +
                                 "You plummet to your doom and never found again!");
+                                Console.ReadKey();
                                 ProgramUI.Print("Just Kidding! You climb back to the top and try again, after taking 100 Damage, of course.");
                                 Console.ReadKey();
                                 ProgramUI.currentPlayer.health -= 100;
@@ -50,10 +51,11 @@ public class Area {
                             }
                         }
                         else if(caseInput1 == "2") {
-                            ProgramUI.Print("You turn back the way you came. Kicking yourself all the while trying to decide" + 
-                            "if you really could have made it across");
+                            ProgramUI.Print("You turn back the way you came. Kicking yourself all the while trying to decide " + 
+                            "if you really could have made it across.");
                             case1Visited = true;
                             case1ContinueToRun = false;
+                            Console.ReadKey();
                         }
                         else{
                             ProgramUI.Print("Come on now. You gotta pick.");
@@ -70,7 +72,7 @@ public class Area {
                     while(case2ContinueToRun){
                         
                         Console.Clear();
-                        Console.WriteLine("You travel down the road for about an hour before it sharply turns to the right. Do you continue?\n" +
+                        ProgramUI.Print("You travel down the road for about an hour before it sharply turns to the right. Do you continue?\n" +
                         "1. Sure why not.\n" +
                         "2. Eh. Think I'll turn back.\n");
                         string caseInput2 = Console.ReadLine();
@@ -144,7 +146,7 @@ public class Area {
                             break;
                         } else {
                             Console.Clear();
-                            Console.WriteLine("You travel down the road and you realize that this had to be the easiest way to get where you were going by far.");
+                            ProgramUI.Print("You travel down the road and you realize that this had to be the easiest way to get where you were going by far.");
                             Console.ReadKey();
                             ProgramUI.Print("It almost feels like the developers started running short on time couldn't fully build out each area.");
                             Console.ReadKey();
