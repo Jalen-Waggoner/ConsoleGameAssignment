@@ -2,76 +2,237 @@ using System;
 public class Encounters
     {
         static Random rand = new Random(DateTime.Now.Millisecond);
+
         
         public static void RandomEncounter() {
-            System.Console.WriteLine("While exploring you some rustling and glance behind you to see a flick of movement.");
+            Print("While exploring you some rustling and glance behind you to see a flick of movement.");
             Console.ReadKey();
-            System.Console.WriteLine("\"Come on out so that we can be done with this! I have Dragon Balls to collect!\" you taught in the direction of the noise.");
+            Print("\"Come on out so that we can be done with this! I have Dragon Balls to collect!\" you taunt in the direction of the noise.");
             Console.ReadKey();
-            System.Console.WriteLine($"After a moment of deliberation, figure emerges from the shadows and charges for you head on!");
+            Print($"After a moment of deliberation, figure emerges from the shadows and charges for you head on!");
             Console.ReadKey();
             Combat( true, "", 0, 0);
+            Console.ReadKey();
+            Print($"The monster explodes into a bajillion pieces, splattering it viscera in all directions.\n"+
+            $"Some lands on you and");
+            Console.ReadKey();
+            Console.Clear();
         }
-        
-        //Encounters
-        public static void Boss1() {
-            Console.WriteLine("As you approach you quickly realize you were right to come here.\n" +
+
+    //Encounters
+    public static void Boss1() {
+            Print("As you approach you quickly realize you were right to come here.\n" +
             "The thing you saw is Android 13! The muscle bound menace with a baseball cap made by the evil Dr.Gero!");
             Console.ReadKey();
-            Console.WriteLine($"You square your jaw and set your gaze directly at Android 13. Daring him to take you on!");
+            Print("You square your jaw and set your gaze directly at Android 13. Daring him to take you on!");
             Console.ReadKey();
-            Combat(false,"Android 13", 1, 4);
-            Console.WriteLine($"\"AGHAHHHH! How could this be!? Thwarted by a grubby little peon like you!?\" Android 13 yells in defeat as you brush the dust off your sleeve.");
-            Console.WriteLine("As you look down your nose at the crumpled mess of a monster below you, you can't help but feel your ego swell to even greater heights.");
+            Combat(false,"Android 13", 4, 8);
+            Console.ReadKey();
+            //boss defeat text
+            Console.ReadKey();
             Console.Clear();
         }
 
         public static void Boss2() {
-            Console.WriteLine("Looking into the distance, you see something coming towards you at great speed.");
-            System.Console.WriteLine($"\"A bird?\" you think... \"Maybe a plane?\"");
-            System.Console.WriteLine("You quickly realize its another Android heading your way");
+            Print("Looking into the distance, you see something coming towards you at great speed.");
+            Print($"\"A bird?\" you think... \"Maybe a plane?\"");
+            Print("You quickly realize its another Android heading your way");
             Console.ReadKey();
-            System.Console.WriteLine($"You swoop to the left, dodging his attack. \"Are we really going to do this?\" you ask, obviously annoyed.");
-            System.Console.WriteLine($"As he's gathering his balance he lets out a guttural scream \"Fight me and PERISH!\"");
+            Print($"You swoop to the left, dodging his attack. \"Are we really going to do this?\" you ask, obviously annoyed.");
+            Print($"As he's gathering his balance he lets out a guttural scream \"Fight me and PERISH!\"");
             Console.ReadKey();
-            Combat(false, "Android 15", 20, 8);
-            System.Console.WriteLine("Android 15 sputters unintelligibly, reaching his hand out, grasping the empty air around him as if it was his last chance of survival.");
-            System.Console.WriteLine($"\"You should've known you'd be no match for me, Android.\" you snide, sauntering away zealously.");
+            Combat(false, "Android 15", 8, 16);
+            Console.ReadKey();
+            //boss defeat text
+            Console.ReadKey();
+            Console.Clear();
         }
         public static void Boss3() {
-            // Encounter description Console.WriteLine();
+            // Encounter description Print();
             // Console.ReadKey();
-            // Console.WriteLine($"You square your jaw and set your gaze directly at Android 13. Daring him to take you on!");
+            // Print($"You square your jaw and set your gaze directly at Android 13. Daring him to take you on!");
             // Console.ReadKey();
-            Combat(false, "Android 17", 9, 16); //name, attack value, health.
+            Combat(false, "Android 17", 16, 32); //bool name, attack value, health.
+            Console.ReadKey();
+            Print("\"AGHAHHHH! How could this be!? Thwarted by a grubby little peon like you!?\"\n" + 
+            "Android 17 yells in defeat as you brush the dust off your sleeve.");
+            Print("As you look down your nose at the crumpled mess of a monster below you,\n" +
+            "you can't help but feel your ego swell to even greater heights.");
+            Console.ReadKey();
+            Console.Clear();
         }
         public static void Boss4() {
-            // Encounter description Console.WriteLine();
+            // Encounter description Print();
             // Console.ReadKey();
-            // Console.WriteLine($"You square your jaw and set your gaze directly at Android 13. Daring him to take you on!");
+            // Print($"You square your jaw and set your gaze directly at Android 13. Daring him to take you on!");
             // Console.ReadKey();
-            Combat(false, "Android 21", 27, 32); //name, attack value, health.
+            Combat(false, "Android 21", 32, 64); //bool name, attack value, health.
+            Console.ReadKey();
+            Print("Android 15 sputters unintelligibly, reaching his hand out,\n" +
+            "grasping the empty air around him as if it was his last chance of survival.");
+            Print($"\"You should've known you'd be no match for me, Android.\" you snide, sauntering away zealously.");
+            Console.ReadKey();
+            Console.Clear();
         }
         
         
         public static void FinalBoss() {
-            // Encounter description Console.WriteLine();
-            // Console.ReadKey();
-            // Console.WriteLine($"You square your jaw and set your gaze directly at Android 13. Daring him to take you on!");
-            // Console.ReadKey();
-            Combat(false, "Vegeta", 135, 128); //name, attack value, health.
-            System.Console.WriteLine("The boss being defeated you glance to the sky and see a majestic dragon.");
-            System.Console.WriteLine("\"Greetings TJ! You have collected all of my ballz. As your reward for handling them with care and honor, I bestow but one wish. An all powerful wish that can grant you anything you desire.\"");
-            System.Console.WriteLine("\"Now then, what shall it be?!\"");
+            // add intro
+            Combat(false, "Vegeta", 160, 320); //name, attack value, health.
+            Console.ReadKey();
+            //boss defeat text
+            Print("With Vegeta being defeated you glance to the sky and see a majestic dragon.");
+            Print("\"Greetings TJ! You have collected all of my ballz. As your reward for handling them with care and honor, I bestow but one wish. An all powerful wish that can grant you anything you desire.\"");
+            Print("\"Now then, what shall it be?!\"");
             string wish = System.Console.ReadLine();
             if (rand.Next() * 100 <= 33) {
-            System.Console.WriteLine($"\"Hmmm. Rather odd request but I shall grant it none the less.\"");
+            Print($"\"Hmmm. Rather odd request but I shall grant it none the less.\"");
             } else if (rand.Next() * 100 <= 66) {
-            System.Console.WriteLine($"\"Well, thats not something I'd wish for, but so be it.\"");
+            Print($"\"Well, thats not something I'd wish for, but so be it.\"");
             } else if (rand.Next() * 100 <= 99) {
-            System.Console.WriteLine($"\"As you wish, weirdo!\"");
+            Print($"\"As you wish, weirdo!\"");
+            Console.ReadKey();
+            Console.Clear();
             }
         }
+
+        
+        public static void Valley() {
+             bool selectionNeeded = true;
+             int db = 1;
+
+
+            while (selectionNeeded) {
+                Print("You step over your victims lifeless body and notice a bulbous orange sphere protruding from his left pocket.");
+                Print("Do you think you should see what it is?\n" +
+                "1. \"Well, curiousity hasnt killed this cat... yet...\"\n" +
+                "2. \"Eww? Not going anywhere near any dead people... Gross!\"");
+
+                string selection = Console.ReadLine();
+
+                if (selection == "1") {
+                    Print("You found a flippin' Dragon Ball! Wow!");
+                    ProgramUI.currentPlayer.dragonball += db;
+                    selectionNeeded = false;
+                } else if (selection == "2") {
+                    Print("You walk away from the scene, gagging... Come on, dude!");
+                    selectionNeeded = false;
+                }
+            }
+        }
+
+        public static void Emporium() {
+            bool selectionNeeded = true;
+
+            while (selectionNeeded) {
+                Print("You here shouting in the distance.\n" +
+                "You wonder again what is keeping you from peacful rest, so you head to the east to investigate.\n" + 
+                "You see a shop up ahead.");
+                Print("Do you want to...\n" +
+                "1. Enter the shop? Or...\n" +
+                "2. Keep searching for a quiet oasis to take your nap?");
+
+                string selection = Console.ReadLine();
+
+                if (selection == "1") {
+                    Print("As you approach, the shouting gets louder.\n" +
+                    "You see the sign above the door that reads \"Lao's Emporium\" and think \"This can't be so bad\"...");
+                    Shop.LoadShop(ProgramUI.currentPlayer);
+                    selectionNeeded = false;
+                }
+                else if (selection == "2") {
+                    Print("You shake your head, \"No way I'm going there!\", and sulk as you make your way to a nearby lake\n" +
+                    "\"Surely I should find it relaxing by the water.\"");
+                    selectionNeeded = false;
+                }
+            }
+        }
+
+        public static void QuietLake() {
+            bool selectionNeeded = true;
+            int db = 1;
+
+            while (selectionNeeded) {
+
+            //Selections here
+
+            string selection = Console.ReadLine();
+
+            if (selection == "1") {
+                    Print("You found a flippin' Dragon Ball! Wow!");
+                    ProgramUI.currentPlayer.dragonball += db;
+                    selectionNeeded = false;
+                } else if (selection == "2") {
+                    Print("You walk away, unbothered and unaware that you may be missing out on a fantastic find.");
+                    selectionNeeded = false;
+                }
+            }
+        }
+
+        public static void Forest() {
+            bool selectionNeeded = true;
+            int db = 1;
+
+            while (selectionNeeded) {
+
+            //Selections here
+
+            string selection = Console.ReadLine();
+
+            if (selection == "1") {
+                    Print("You found a flippin' Dragon Ball! Wow!");
+                    ProgramUI.currentPlayer.dragonball += db;
+                    selectionNeeded = false;
+                } else if (selection == "2") {
+                    Print("You walk away,"); // leaving text
+                    selectionNeeded = false;
+                }
+            }
+        }
+
+        public static void MountainBase() {
+            bool selectionNeeded = true;
+            int db = 1;
+
+            while (selectionNeeded) {
+
+            //Selections here
+
+            string selection = Console.ReadLine();
+
+            if (selection == "1") {
+                    Print("You found a flippin' Dragon Ball! Wow!");
+                    ProgramUI.currentPlayer.dragonball += db;
+                    selectionNeeded = false;
+                } else if (selection == "2") {
+                    Print("You walk away,"); // leaving text
+                    selectionNeeded = false;
+                }
+            }
+        }
+
+        public static void Temple() {
+            bool selectionNeeded = true;
+            int db = 1;
+
+            while (selectionNeeded) {
+
+            //Selections here
+
+            string selection = Console.ReadLine();
+
+            if (selection == "1") {
+                    Print("You found a flippin' Dragon Ball! Wow!");
+                    ProgramUI.currentPlayer.dragonball += db;
+                    selectionNeeded = false;
+                } else if (selection == "2") {
+                    Print("You walk away,"); // leaving text
+                    selectionNeeded = false;
+                }
+            }
+        }
+
+        // win encounter/ end credits?
         
         //Encounter Tools
         public static void Combat( bool random, string name, int power, int health) {
@@ -111,8 +272,8 @@ public class Encounters
                     damage = 0;} 
                     int attack = rand.Next(0, ProgramUI.currentPlayer.weaponValue) + rand.Next(1,4);
                     
-                    Console.WriteLine($"You swipe horizontally with your Power Pole! Delivering a staggering blow that deals {attack}");
-                    Console.WriteLine($"{n} follows up with their own attack!    You lose {damage} health");
+                    Print($"You swipe horizontally with your Power Pole! Delivering a staggering blow that deals {attack} damage!");
+                    Print($"{n} follows up with their own attack!    You lose {damage} health!");
                     ProgramUI.currentPlayer.health -= damage;
                     h -= attack;
                 }
@@ -123,8 +284,8 @@ public class Encounters
                     damage = 0;}
                     int attack = rand.Next(0, ProgramUI.currentPlayer.weaponValue) + rand.Next(1,4);
                     
-                    Console.WriteLine($"You puff up your chest while taunting with an outstretched hand. Ready and willing to accept the blow from {n}.");
-                    Console.WriteLine($"{n} lashes out in frustration! Dealing a glancing blow while taking {attack} damage due to their sloppiness.    You lose {damage} health");
+                    Print($"You puff up your chest while taunting with an outstretched hand. Ready and willing to accept the blow from {n}.");
+                    Print($"{n} lashes out in frustration! Dealing a glancing blow while taking {attack} damage due to their sloppiness.    You lose {damage} health");
                     ProgramUI.currentPlayer.health -= damage;
                     h -= attack;
                 }
@@ -137,21 +298,21 @@ public class Encounters
                     //Heal
                     if (ProgramUI.currentPlayer.potion == 0) {
                         int damage = p - ProgramUI.currentPlayer.armorValue;
-                        Console.WriteLine("You desperately grab at your knapsack rummaging for a healing potion but you're all out!");
-                        Console.WriteLine($"Seizing the opportunity, {n} strikes hard and fast dealing {damage}!");
+                        Print("You desperately grab at your knapsack rummaging for a healing potion but you're all out!");
+                        Print($"Seizing the opportunity, {n} strikes hard and fast dealing {damage}!");
                         if (damage < 0 ) {
                             damage = 0;}
                     } else {
-                        Console.WriteLine("You reach into your knapsack and pop the cork off a healing potion. You chug it like a white claw and smash the glass on the ground.");
-                        int potionV = 5;
-                        Console.WriteLine($"You gain {potionV} health");
+                        Print("You reach into your knapsack and pop the cork off a healing potion. You chug it like a white claw and smash the glass on the ground.");
+                        int potionV = 50;
+                        Print($"You gain {potionV} health");
                         ProgramUI.currentPlayer.health += potionV;
-                        Console.WriteLine($"Mid chug {n} jabs forward!");
+                        Print($"{n} jabs forward!");
                         int damage = (p / 2) - ProgramUI.currentPlayer.armorValue;
                         if (damage < 0 ) {
                             damage = 0;}
                         ProgramUI.currentPlayer.potion -= 1;
-                        Console.WriteLine($"You loose {damage} health");
+                        Print($"You loose {damage} health");
                         }
                     }
                 else if(input.ToLower() == "r" || input.ToLower() == "run"){
@@ -161,24 +322,27 @@ public class Encounters
                     if (damage < 0){
                         damage = 0;}
 
-                        System.Console.WriteLine("You try to run from combat, but are thwarted in your attempt!");
-                        System.Console.WriteLine("\"You can't run from me!\"");
-                        System.Console.WriteLine($"You've taken {damage} damage!");
+                        Print("You try to run from combat, but are thwarted in your attempt!");
+                        Print("\"You can't run from me!\"");
+                        Print($"You've taken {damage} damage!");
                         ProgramUI.currentPlayer.health -= damage;
                 }
                 Console.ReadKey();
 
+
+            // DEATH
             if (ProgramUI.currentPlayer.health <= 0){
                 Console.Clear();
-                System.Console.WriteLine("You slump to your knees, defeated, waiting for the final blow to strike.");
+                Print("You slump to your knees, defeated, waiting for the final blow to strike.");
                 Console.ReadKey();
-                System.Console.WriteLine("You think to yourself,\"Maybe I should just think of this as one long, long nap.\" Everything fades to black.");
+                Print("You think to yourself,\"Maybe I should just think of this as one long, long nap.\" Everything fades to black.");
                 Console.ReadKey();
                 Environment.Exit(0);
             }
+        
             }
         }
-            int c = rand.Next(10,50);
+            //int c = rand.Next(10,50);
             public static string GetName(){
                 switch(rand.Next(0,4)){
                     case 0:
@@ -194,4 +358,12 @@ public class Encounters
                 }
             return "Ruffian";
             }
-            }
+            public static void Print(string text, int  textdelay = 40){
+    foreach (char c in text){
+        Console.Write(c);
+        System.Threading.Thread.Sleep(textdelay);
+    }
+    System.Console.WriteLine();
+}
+    }
+            

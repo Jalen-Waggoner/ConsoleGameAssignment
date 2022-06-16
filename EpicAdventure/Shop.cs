@@ -1,11 +1,10 @@
 using System;
 
-
     public class Shop
     {
-        static int armorMod;
-        static int weaponMod;
-        static int difficultyMod;
+        //static int armorMod;
+        //static int weaponMod;
+        //static int difficultyMod;
         public static void LoadShop(TJ tj){
             RunShop(tj);
         }
@@ -18,9 +17,9 @@ using System;
             int difP;
             
             
-            System.Console.WriteLine("You dust your boots off at the door and pull out your coin purse as you walk to the front counter of the best adventurer's shop there is. \"Leo's Emporium\"");
+            Print("You dust your boots off at the door and pull out your coin purse as you walk to the front counter of the best adventurer's shop there is. \"Leo's Emporium\"");
             Console.ReadKey();
-            System.Console.WriteLine("\"WELL HELLO THERE YOUNG TJ!\" Mr.Lao shouts as usual from behind the counter as his hearing isn't what it used to be. \"WHATCHA LOOKING FOR TODAY!?\"");
+            Print("\"WELL HELLO THERE YOUNG TJ!\" Mr.Lao shouts as usual from behind the counter as his hearing isn't what it used to be. \"WHATCHA LOOKING FOR TODAY!?\"");
             
             while (true){
 
@@ -39,16 +38,17 @@ using System;
             System.Console.WriteLine($"(D)ifficulty Mod:        ${difP}");
             System.Console.WriteLine("=============================");
             System.Console.WriteLine("(E)xit");
-            System.Console.WriteLine();
-            System.Console.WriteLine();
+            System.Console.WriteLine();//either break or text to show that shop is above stats
+            System.Console.WriteLine();//text or bool to show purchase?
             System.Console.WriteLine("           TJ Stats          ");
             System.Console.WriteLine("=============================");
-            System.Console.WriteLine($"Current Health:  {tj.health}");
-            System.Console.WriteLine($"Weapon:     {tj.weaponValue}");
-            System.Console.WriteLine($"Armor:       {tj.armorValue}");
-            System.Console.WriteLine($"Potions:         {tj.potion}");
-            System.Console.WriteLine($"Gold:             {tj.coins}");
-            System.Console.WriteLine($"Difficulty Mod:    {tj.mods}");
+            System.Console.WriteLine($"Current Health:          {tj.health}");
+            System.Console.WriteLine($"Weapon:                  {tj.weaponValue}");
+            System.Console.WriteLine($"Armor:                   {tj.armorValue}");
+            System.Console.WriteLine($"Potions:                 {tj.potion}");
+            System.Console.WriteLine($"Gold:                    {tj.coins}");
+            System.Console.WriteLine($"Difficulty Mod:          {tj.mods}");
+            System.Console.WriteLine($"Dragon Balls Collected:  {tj.dragonball}");
             System.Console.WriteLine("=============================");
             
             string input = Console.ReadLine().ToLower();
@@ -66,9 +66,9 @@ using System;
                 TryBuy("difficultyMod", difP, tj);
             }
             else if (input == "e" || input == "exit"){
-                System.Console.WriteLine("\"THANKS FOR STOPPING BY! BE SURE TO COME BACK NOW YOU HEAR!?\"");
+                Print("\"THANKS FOR STOPPING BY! BE SURE TO COME BACK NOW YOU HEAR!?\"");
                 Console.ReadLine();
-                System.Console.WriteLine("You lightly chuckle to yourself at the irony of Mr.Lao's last statement, loudly thank him for his services, and exit the shop.");
+                Print("You lightly chuckle to yourself at the irony of Mr.Lao's last statement, loudly thank him for his services, and exit the shop.");
                 Console.ReadLine();
                 break;
             }
@@ -89,11 +89,17 @@ using System;
                 tj.coins -= cost;
                 }
                 else{
-                    System.Console.WriteLine("\"YOU DON'T HAVE ENOUGH GOLD FOR THAT SONNY AND I'M NOT RUNNING A CHARITY HERE! COME BACK LATER WHEN YOU HAVE ENOUGH!\"");
+                    Print("\"YOU DON'T HAVE ENOUGH GOLD FOR THAT SONNY AND I'M NOT RUNNING A CHARITY HERE! COME BACK LATER WHEN YOU HAVE ENOUGH!\"");
                     Console.ReadLine();
                 }
             }
-            
-            }
         }
     }
+        public static void Print(string text, int  textdelay = 40){
+        foreach (char c in text){
+            Console.Write(c);
+            System.Threading.Thread.Sleep(textdelay);
+        }
+        System.Console.WriteLine();
+    }
+}
