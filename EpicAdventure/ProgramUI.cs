@@ -5,8 +5,29 @@ using System;
 
 public class ProgramUI {
     public static TJ currentPlayer = new TJ();
+    
+    bool continueToRun = true;
+    
     public void Run(){
-        bool continueToRun = true;
+        while(currentPlayer.health > 0){
+        // RunMenu();
+        Encounters.Boss1();
+        //Area 1
+        Encounters.Emporium();
+        Encounters.Boss4();
+        //Area 2 
+        Encounters.Emporium();
+        Encounters.FinalBoss();
+        }
+
+
+
+
+
+
+
+        Encounters.RandomEncounter();
+        
         while(continueToRun){
         Encounters.Boss1();
             if (ProgramUI.currentPlayer.health <= 0)
@@ -37,10 +58,6 @@ public class ProgramUI {
             if (ProgramUI.currentPlayer.health <= 0)
             continueToRun = false;
 
-        Encounters.Boss2();
-            if (ProgramUI.currentPlayer.health <= 0)
-            continueToRun = false;
-
         Encounters.Forest(); 
             if (ProgramUI.currentPlayer.health <= 0)
             continueToRun = false;
@@ -52,10 +69,7 @@ public class ProgramUI {
         Encounters.Emporium();
             if (ProgramUI.currentPlayer.health <= 0)
             continueToRun = false;
-    
-        Encounters.Boss3();
-            if (ProgramUI.currentPlayer.health <= 0)
-            continueToRun = false;
+
 
         Encounters.MountainBase(); 
             if (ProgramUI.currentPlayer.health <= 0)
@@ -106,21 +120,21 @@ public class ProgramUI {
     "You've had no luck this far, until one day...");
     Console.ReadKey();
     Console.Clear();
-    Print("You wake up from an amazing nap atop a grassy knoll.", 60);
-    Print("\"Wow\" you think to yourself, \"That was great! I really need to do that more often!\"", 60);
-    Print("Wiping the sleep from your eyes you peer out across the valley below and something catches your eye...", 60);
+    Print("You wake up from an amazing nap atop a grassy knoll.");
+    Print("\"Wow\" you think to yourself, \"That was great! I really need to do that more often!\"");
+    Print("Wiping the sleep from your eyes you peer out across the valley below and something catches your eye...");
     Console.ReadKey();
-    Print("\"Odd. Could that be? No surely it couldn't. Unless? ...\"", 60);
+    Print("\"Odd. Could that be? No surely it couldn't. Unless? ...\"");
     Console.ReadKey();
 
     while(selectionNeeded) {
     Print("Do you go to inspect the anomaly or lay back down for another nap?\n" + 
     "1. Charge!\n" +
-    "2. Zzzzzz", 40);
+    "2. Zzzzzz", 30);
     string selection = Console.ReadLine();
     if (selection == "1") {
     Console.Clear();
-    Print("Uncertain yet determined, you tighten your gi, strap a Power Pole to your side,\n" + 
+    Print("Uncertain yet determined, you tighten your gi, strap a Power Pole to your side along with your trusty Shield,\n" + 
     " and set your dreads in place before speeding down the hill towards your quarry.");
     selectionNeeded = false;
     } 

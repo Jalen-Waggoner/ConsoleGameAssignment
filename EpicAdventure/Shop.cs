@@ -16,10 +16,12 @@ using System;
             int weaponP;
             int difP;
             
-            
-            Print("You dust your boots off at the door and pull out your coin purse as you walk to the front counter of the best adventurer's shop there is. \"Leo's Emporium\"");
+            Console.Clear();
+            Print("You dust your boots off at the door and pull out your coin purse as you walk to the front counter \n" +
+            "of the best adventurer's shop there is. \"Leo's Emporium\"");
             Console.ReadKey();
-            Print("\"WELL HELLO THERE YOUNG TJ!\" Mr.Lao shouts as usual from behind the counter as his hearing isn't what it used to be. \"WHATCHA LOOKING FOR TODAY!?\"");
+            Print("\"WELL HELLO THERE YOUNG TJ!\" Mr.Lao shouts as usual from behind the counter as his hearing isn't \n" +
+            "what it used to be. \"WHATCHA LOOKING FOR TODAY!?\"");
             
             while (true){
 
@@ -57,6 +59,7 @@ using System;
                 TryBuy("difficultyMod", difP, tj);
             }
             else if (input == "c" || input == "check stats"){
+            Console.Clear();
             System.Console.WriteLine("           TJ Stats          ");
             System.Console.WriteLine("=============================");
             System.Console.WriteLine($"Current Health:          {tj.health}");
@@ -69,6 +72,7 @@ using System;
             System.Console.WriteLine("=============================");
             }
             else if (input == "e" || input == "exit"){
+                Console.Clear();
                 Print("\"THANKS FOR STOPPING BY! BE SURE TO COME BACK NOW YOU HEAR!?\"");
                 Console.ReadLine();
                 Print("You lightly chuckle to yourself at the irony of Mr.Lao's last statement, loudly thank him for his services, and exit the shop.");

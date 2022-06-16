@@ -34,126 +34,139 @@ public class Encounters
             Console.Clear();
         }
 
-        public static void Boss2() {
-            Print("Looking into the distance, you see something coming towards you at great speed.");
-            Print($"\"A bird?\" you think... \"Maybe a plane?\"");
-            Print("You quickly realize its another Android heading your way");
-            Console.ReadKey();
-            Print($"You swoop to the left, dodging his attack. \"Are we really going to do this?\" you ask, obviously annoyed.");
-            Print($"As he's gathering his balance he lets out a guttural scream \"Fight me and PERISH!\"");
-            Console.ReadKey();
-            Combat(false, "Android 15", 8, 16);
-            Console.ReadKey();
-            //boss defeat text
-            Console.ReadKey();
-            Console.Clear();
-        }
-        public static void Boss3() {
-            Print("You round a bend to find a menacing figure standing in the road. Gaze firmly fixPrint.", 60);
-            Console.ReadKey();
-            Print("Almost as if it were expecting you...a shiver runs down your spine as you cautiously approach.", 60);
-            Console.ReadKey();
-            Print("\"My apologies, Nobel TJ, but I'm afraid that your quest ends here. With me.\" the figure says with a jaunty," + 
-            "well-spoken voice laced with a nearly imperceptible hint of malice. Almost.", 60);
-            Console.ReadKey();
-            Print("After hearing his voice and walking more closely you recognize the figure to be none other than Android 17. The Gentleman Android." +
-            "However, all that you've heard about Android 17 is that he is only a gentleman in name and quite deadly in a fight.", 60);
-            Console.ReadKey();
-            Print("Giving him no more time for pleasantries you charge head long! Screaming \"ERAHHHHHHHH\" as if to mock his propriety!", 60);
-            Console.ReadKey();
-            Print("The time for words has ended. Now we speak through our weapons!", 60);
-            Combat(false, "Android 17", 9, 16); //name, attack value, health.
-            Print("\"AGGHH\" Android 17 exclaims as you deliver the final blow squarely on his polite face!", 60);
-            Console.ReadKey();
-            Print("As he sputters the last of his motor oil and begins to boot down he asks, \"How? *cough How could this be?", 60);
-            Console.ReadKey();
-            Print("\"Because don't you know, Jeeves, that politeness doesn't equal rightness...", 60);
-            Console.ReadKey();
-            Print("After an awkward and uncomfortable pause Android 17 replies,\"Remarkable. I didn't think that I could have been more ashamed of being bested" +
-            "by you yet I am proven a fool again.\"", 60);
-            Console.ReadKey();
-            Print("\"Hey\" you shout back \"It sounded a lot better in my head ok!", 60);
-            Console.ReadKey();
-            Print("Ego slightly dampened you gather your things and continue on down the road to the next area.", 60);
-            Console.ReadKey();
-        }
+        // public static void Boss2() {
+        //     Print("Looking into the distance, you see something coming towards you at great speed.");
+        //     Print($"\"A bird?\" you think... \"Maybe a plane?\"");
+        //     Print("You quickly realize its another Android heading your way");
+        //     Console.ReadKey();
+        //     Print($"You swoop to the left, dodging his attack. \"Are we really going to do this?\" you ask, obviously annoyed.");
+        //     Print($"As he's gathering his balance he lets out a guttural scream \"Fight me and PERISH!\"");
+        //     Console.ReadKey();
+        //     Combat(false, "Android 15", 8, 16);
+        //     Console.ReadKey();
+        //     //boss defeat text
+        //     Console.ReadKey();
+        //     Console.Clear();
+        // }
+        // public static void Boss3() {
+        //     Print("You round a bend to find a menacing figure standing in the road. Gaze firmly fixPrint.", 60);
+        //     Console.ReadKey();
+        //     Print("Almost as if it were expecting you...a shiver runs down your spine as you cautiously approach.", 60);
+        //     Console.ReadKey();
+        //     Print("\"My apologies, Nobel TJ, but I'm afraid that your quest ends here. With me.\" the figure says with a jaunty," + 
+        //     "well-spoken voice laced with a nearly imperceptible hint of malice. Almost.", 60);
+        //     Console.ReadKey();
+        //     Print("After hearing his voice and walking more closely you recognize the figure to be none other than Android 17. The Gentleman Android." +
+        //     "However, all that you've heard about Android 17 is that he is only a gentleman in name and quite deadly in a fight.", 60);
+        //     Console.ReadKey();
+        //     Print("Giving him no more time for pleasantries you charge head long! Screaming \"ERAHHHHHHHH\" as if to mock his propriety!", 60);
+        //     Console.ReadKey();
+        //     Print("The time for words has ended. Now we speak through our weapons!", 60);
+        //     Combat(false, "Android 17", 9, 16); //name, attack value, health.
+        //     Print("\"AGGHH\" Android 17 exclaims as you deliver the final blow squarely on his polite face!", 60);
+        //     Console.ReadKey();
+        //     Print("As he sputters the last of his motor oil and begins to boot down he asks, \"How? *cough How could this be?", 60);
+        //     Console.ReadKey();
+        //     Print("\"Because don't you know, Jeeves, that politeness doesn't equal rightness...", 60);
+        //     Console.ReadKey();
+        //     Print("After an awkward and uncomfortable pause Android 17 replies,\"Remarkable. I didn't think that I could have been more ashamed of being bested" +
+        //     "by you yet I am proven a fool again.\"", 60);
+        //     Console.ReadKey();
+        //     Print("\"Hey\" you shout back \"It sounded a lot better in my head ok!", 60);
+        //     Console.ReadKey();
+        //     Print("Ego slightly dampened you gather your things and continue on down the road to the next area.", 60);
+        //     Console.ReadKey();
+        // }
         public static void Boss4() {
-            Print("While reflecting on the past adventures for the day you find a nice shaded tree and set down for a brief rest.", 60);
+            Print("While reflecting on the past adventures for the day you find a nice shaded tree and set down for a brief rest.");
             Console.ReadKey();
-            Print("You close your eyes and slowly drift off. You think to yourself,\"I wonder how much longer it will be before I " +
-            "find a lead on the next Dragon Ball.", 60);
+            Print("You close your eyes and slowly drift off. You think to yourself, \"I wonder how much longer it will be before I\n" +
+            "find a lead on the next Dragon Ball.");
             Console.ReadKey();
-            Print("Uncertain how much time has passed you awaken suddenly and open your eyes just in time to see a fist hurdling towards your face!", 60);
+            Print("Uncertain how much time has passed you awaken suddenly and open your eyes just in time to see a fist hurdling towards your face!");
             Console.ReadKey();
-            Print("Like lightening you duck in roll as the impact from the fist hitting the ground sends you flying out 20 feet from your camping spot.", 60);
+            Print("Like lightening you duck in roll as the impact from the fist hitting the ground sends you flying out \n" + 
+            "20 feet from your camping spot.");
             Console.ReadKey();
-            Print("After landing hard you spring to your feet and look to see a bald man with white mustache sprinting towards you.", 60);
+            Print("After landing hard you spring to your feet and look to see a bald man with white mustache sprinting towards you.");
             Console.ReadKey();
-            Print("There is no mistaking it. This is no man. This is Android 20, better known as the evil Dr.Gero in the flesh. So to speak", 60);
+            Print("There is no mistaking it. This is no man. This is Android 20, better known as the evil Dr.Gero in the flesh. So to speak.");
             Console.ReadKey();
-            Print("\"You're a fast one aren't you?!\" he taunts as you dodge a second attack.", 60);
+            Print("\"You're a fast one aren't you?!\" he taunts as you dodge a second attack.");
             Console.ReadKey();
-            Print("\"Fast enough to send all your other maniacal android minions to the scrapyard!\" you taunt back.", 60);
+            Print("\"Fast enough to send all your other maniacal android minions to the scrapyard!\" you taunt back.");
             Console.ReadKey();
-            Print("\"I can see now where their evil streak comes from. Must run in the family. HA!", 60);
+            Print("\"I can see now where their evil streak comes from. Must run in the family. HA!\"");
             Console.ReadKey();
-            Print("You can tell your last comment ignited something in him as he raises both arms into the and them down hard onto the ground!", 60);
+            Print("You can tell your last comment ignited something in him as he raises both arms into the air and slams them down\n" + 
+            "hard onto the ground!");
             Console.ReadKey();
-            Print("The impact is like an earthquake and could be felt from miles around. You, being quick, jumped into the air before" +
-            "the shockwave could reach.", 60);
+            Print("The impact is like an earthquake and could be felt from miles around. \n" +
+            "You, being quick, jumped into the air before the shockwave could reach.");
             Console.ReadKey();
-            Print("As the dust settles you land in the crater made by this monster. The battlefield set, you roll up your sleeves", 60);
+            Print("As the dust settles you land in the crater made by this monster.");
             Console.ReadKey();
-            Print("Pump both fists", 60);
+            Print("The battlefield is set");
             Console.ReadKey();
-            Print("And plant your feet. Staring down Dr.Gero in the eye. You're ready. And he's about to regret waking you up.", 60);
+            Print("You roll up your sleeves");
+            Console.ReadKey();
+            Print("Pump both fists");
+            Console.ReadKey();
+            Print("And plant your feet.");
+            Console.ReadKey();
+            Print("Staring down Dr.Gero in the eye. You're ready. And he's about to regret waking you up.");
             Console.ReadKey();
             Combat(false, "Dr.Gero / Android 20", 27, 16); //name, attack value, health.
-            Print("At the center of the android-made crater lays Dr.Gero.", 60);
+            Console.Clear();
+            Print("At the center of the android-made crater lays Dr.Gero.");
             Console.ReadKey();
-            Print("The force of your final blow laid him out flat to the ground and shut him down without any last words.", 60);
+            Print("The force of your final blow laid him out flat to the ground and shut him down without any last words.");
             Console.ReadKey();
-            Print("Battered and bruised, you stand favoring one leg now and lear over this construct of destruction", 60);
+            Print("Battered and bruised, you stand now favoring one leg, leering over this construct of destruction.");
             Console.ReadKey();
-            Print("Grabbing an injured arm you take a breath and say,\"And that is what happens to \"people\" who wake me up from a nap!" +
-            "\"Twice!\" \"IN ONE DAY!\"", 60);
+            Print("Grabbing an injured arm you take a breath and say,\"And that is what happens to people who \n" +
+            "wake me up from a nap!\"");
             Console.ReadKey();
-            Print("Wincing from the effort of yelling you limp up and out of the crater. Heading for your next target.", 60);
+            Print("\"Twice!\"");
+            Console.ReadKey();
+            Print("\"IN ONE DAY!\"");
+            Console.ReadKey();
+            Print("Wincing from the effort of yelling you limp up and out of the crater. Heading for your next target.");
             Console.ReadKey();
 }
         
         
         public static void FinalBoss() {
-            Print("You hear a sonic boom. Look up and see something moving like a fall star towards you.", 60);
+            Print("You hear a sonic boom. Look up and see something moving like a fall star towards you.");
             Console.ReadKey();
-            Print("It lands with a crash directly in front of you kicking up dust and debris from the impact.", 60);
+            Print("It lands with a crash directly in front of you kicking up dust and debris from the impact.");
             Console.ReadKey();
             Print("After the haze settles a figure emerges and calls to you. \"So\" he says in a cocky voice, \"you really think that you can" + 
-            "take my ballz just like that eh?!\"", 60);
+            "take my ballz just like that eh?!\"");
             Console.ReadKey();
-            Print("This is it. This is the last boss. This is serious stuff and you shouldn't...too late. You bust out laughing at Vegeta's Expense.", 60);
+            Print("This is it. This is the last boss. This is serious stuff and you shouldn't...too late. You bust out laughing at Vegeta's Expense.");
             Console.ReadKey();
-            Print("Face turing red after the realization hits him, Vegeta yells back,\"HEY! Stop it! I will be taken seriously!!", 60);
+            Print("Face turing red after the realization hits him, Vegeta yells back,\"HEY! Stop it! I will be taken seriously!!");
             Console.ReadKey();
-            Print("\"Mmmhmm. Sure I'm taking this very seriously.\" you reply in between fits of laughter.", 60);
+            Print("\"Mmmhmm. Sure I'm taking this very seriously.\" you reply in between fits of laughter.");
             Console.ReadKey();
-            Print("\"Enough! Lets finish this so that you can be taught some proper respect!\"", 60);
+            Print("\"Enough! Lets finish this so that you can be taught some proper respect!\"");
             Console.ReadKey();
             Print("Wiping the tears from your eyes and ignoring the stitch in your side you square up and turn to face your final challenge.");
             Combat(false, "Vegeta", 135, 128); //name, attack value, health.
-            Print("Vegeta being defeated you glance to the sky and see a majestic dragon.", 60);
+            Print("Vegeta being defeated you glance to the sky and see a majestic dragon.");
             Console.ReadKey();
             Print("\"Greetings TJ! You have collected all of my ballz. As your reward for handling them with care and honor," + 
-            "I bestow but one wish. An all powerful wish that can grant you anything you desire.\"", 60);
+            "I bestow but one wish. An all powerful wish that can grant you anything you desire.\"");
             Console.ReadKey();
             Print("\"Now then, what shall it be?!\"");
             System.Console.ReadLine();
             if (rand.Next() * 100 <= 33) {
-            Print($"\"Hmmm. Rather odd request but I shall grant it none the less.\"", 60);
+            Print($"\"Hmmm. Rather odd request but I shall grant it none the less.\"");
             } else if (rand.Next() * 100 <= 66) {
-            Print($"\"Well, thats not something I'd wish for, but so be it.\"", 60);
+            Print($"\"Well, thats not something I'd wish for, but so be it.\"");
             } else if (rand.Next() * 100 <= 99) {
-            Print($"\"As you wish, weirdo!\"", 60);
+            Print($"\"As you wish, weirdo!\"");
             }
         }
 
@@ -303,8 +316,8 @@ public class Encounters
             int h = 0;
             if (random){
                 n = GetName();
-                p = rand.Next(1, 10);
-                h = rand.Next(1, 10);
+                p = ProgramUI.currentPlayer.GetPower();
+                h = ProgramUI.currentPlayer.GetHealth();
             }
             else{
             n = name;
@@ -333,8 +346,8 @@ public class Encounters
                     damage = 0;} 
                     int attack = rand.Next(0, ProgramUI.currentPlayer.weaponValue) + rand.Next(1,4);
                     
-                    Print($"You swipe horizontally with your Power Pole! Delivering a staggering blow that deals {attack} damage!", 5);
-                    Print($"{n} follows up with their own attack!    You lose {damage} health!", 5);
+                    Print($"You swipe horizontally with your Power Pole +{ProgramUI.currentPlayer.weaponValue}! Delivering a staggering blow that deals {attack} damage!", 15);
+                    Print($"{n} follows up with their own attack!    You lose {damage} health!", 15);
                     ProgramUI.currentPlayer.health -= damage;
                     h -= attack;
                 }
@@ -345,8 +358,8 @@ public class Encounters
                     damage = 0;}
                     int attack = rand.Next(0, ProgramUI.currentPlayer.weaponValue) + rand.Next(1,4);
                     
-                    Print($"You puff up your chest while taunting with an outstretched hand. Ready and willing to accept the blow from {n}.", 5);
-                    Print($"{n} lashes out in frustration! Dealing a glancing blow while taking {attack} damage due to their sloppiness.    You lose {damage} health", 5);
+                    Print($"You puff up your chest while taunting with an outstretched hand. Ready and willing to accept the blow from {n}.", 15);
+                    Print($"{n} lashes out in frustration! Dealing a glancing blow onto your Shield +{ProgramUI.currentPlayer.armorValue} while taking {attack} damage due to their sloppiness.    You lose {damage} health", 15);
                     ProgramUI.currentPlayer.health -= damage;
                     h -= attack;
                 }
@@ -359,21 +372,21 @@ public class Encounters
                     //Heal
                     if (ProgramUI.currentPlayer.potion == 0) {
                         int damage = p - ProgramUI.currentPlayer.armorValue;
-                        Print("You desperately grab at your knapsack rummaging for a healing potion but you're all out!", 5);
-                        Print($"Seizing the opportunity, {n} strikes hard and fast dealing {damage}!", 5);
+                        Print("You desperately grab at your knapsack rummaging for a healing potion but you're all out!", 15);
+                        Print($"Seizing the opportunity, {n} strikes hard and fast dealing {damage}!", 15);
                         if (damage < 0 ) {
                             damage = 0;}
                     } else {
-                        Print("You reach into your knapsack and pop the cork off a healing potion. You chug it like a white claw and smash the glass on the ground.", 5);
+                        Print("You reach into your knapsack and pop the cork off a healing potion. You chug it like a white claw and smash the glass on the ground.", 15);
                         int potionV = 50;
-                        Print($"You gain {potionV} health", 5);
+                        Print($"You gain {potionV} health", 15);
                         ProgramUI.currentPlayer.health += potionV;
-                        Print($"{n} jabs forward!", 20);
+                        Print($"{n} jabs forward!", 15);
                         int damage = (p / 2) - ProgramUI.currentPlayer.armorValue;
                         if (damage < 0 ) {
                             damage = 0;}
                         ProgramUI.currentPlayer.potion -= 1;
-                        Print($"You loose {damage} health", 5);
+                        Print($"You loose {damage} health", 15);
                         }
                     }
                 else if(input.ToLower() == "r" || input.ToLower() == "run"){
@@ -383,13 +396,15 @@ public class Encounters
                     if (damage < 0){
                         damage = 0;}
 
-                        Print("You try to run from combat, but are thwarted in your attempt!", 5);
-                        Print("\"You can't run from me!\"", 5);
-                        Print($"You've taken {damage} damage!", 5);
+                        Print("You try to run from combat, but are thwarted in your attempt!", 15);
+                        Print("\"You can't run from me!\"", 15);
+                        Print($"You've taken {damage} damage!", 15);
                         ProgramUI.currentPlayer.health -= damage;
+                } else {
+                    System.Console.WriteLine("Now is not the time to be indecisive! Hurry and choose!");
+                    Console.ReadKey();
                 }
-                Console.ReadKey();
-
+            Console.ReadKey();
 
             // DEATH
             if (ProgramUI.currentPlayer.health <= 0){
