@@ -3,13 +3,13 @@ using System;
         Random rand = new Random();
         public string name = "Saiyan TJ";
         public int coins = 20000;
-        public int health = 20;
+        public int health = 9001;
         public int damage = 1;
-        public int armorValue = 3;
+        public int armorValue = 1;
         public int potion = 5;
-        public int weaponValue = 7;
-        public int dragonball = 1;
-        public int mods = 20;
+        public int weaponValue = 1;
+        public int dragonball = 0;
+        public int mods = 1;
 
 public int GetHealth(){
     int upper = (2 * mods + 5);

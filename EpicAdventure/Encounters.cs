@@ -5,31 +5,82 @@ public class Encounters
 
         
         public static void RandomEncounter() {
+            int db = 1;
             Console.Clear();
-            Print("While exploring you some rustling and glance behind you to see a flick of movement.");
+            Print("While exploring you hear some rustling and glance behind you to see a flick of movement.");
             Console.ReadKey();
             Print("\"Come on out so that we can be done with this! I have Dragon Balls to collect!\" you taunt in the direction of the noise.");
             Console.ReadKey();
-            Print($"After a moment of deliberation, figure emerges from the shadows and charges for you head on!");
+            Print($"After a moment of deliberation, a figure emerges from the shadows and charges for you head on!");
             Console.ReadKey();
             Combat( true, "", 0, 0);
+            ProgramUI.currentPlayer.dragonball += db;
             Console.ReadKey();
             Print($"The monster explodes into a bajillion pieces, splattering it viscera in all directions.\n"+
-            $"Some lands on you and");
+            $"Some lands on you and you begin violently dry heaving.");
+            Console.ReadKey();
+            Console.Clear();
+            Print("You found a DRAGON BALL!!!");
+System.Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣤⣤⣤⣤⣀⡀⠀⠀⠀⠀⠀⠀⠀");
+System.Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣴⠾⠛⠉⠉⠁⠈⠉⠉⠛⠷⣦⣀⠀⠀⠀⠀");
+System.Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣼⠟⠁⠀⠀⠀⠀⢰⣿⣿⣿⣿⣶⣌⠻⣧⡀⠀⠀");
+System.Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣾⠃⠀⠀⠀⠀⠀⠀⠀⠉⠙⢿⣿⣿⣿⣧⠘⣷⡀⠀");
+System.Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⡇⠀⠀⠀⠀⠀⠀⠀⣸⣆⠀⠀⢻⣿⣿⣿⡀⢸⣇⠀");
+System.Console.WriteLine("⠀⣀⣀⣀⠀⠀⠀⠀⠀⣿⡇⠀⠀⠀⠀⠀⠈⣻⣿⣿⣟⠁⠈⣿⣿⣿⠃⢸⣿⠀");
+System.Console.WriteLine("⠀⠉⠉⠙⠻⢶⣄⠀⠀⢸⡇⠀⠀⠀⠀⠀⠈⠉⢻⡟⠉⠀⠀⢿⣿⠟⠀⢸⡏⠀");
+System.Console.WriteLine("⠀⢰⣿⣿⣦⡀⢻⣆⠀⠀⢿⡄⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⢠⡿⠁⠀");
+System.Console.WriteLine("⠀⠀⠀⢹⣿⣷⠀⣿⡀⠀⠈⠻⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⠟⠁⠀⠀");
+System.Console.WriteLine("⠀⠀⠀⠘⠿⠛⢀⣿⠀⠀⠀⠀⠈⠻⢶⣤⣀⣀⣀⣀⣀⣠⣤⡶⠟⠁⠀⠀⠀⠀");
+System.Console.WriteLine("⠀⠀⠀⠀⠀⣠⡾⠃⠀⣠⣴⣶⣦⣄⠀⠀⠉⠉⠛⠛⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀");
+System.Console.WriteLine("⠀⣤⣴⡶⠟⠋⠀⢀⣾⠋⠀⢤⣄⠙⣷⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+System.Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⢸⣯⠀⠀⠀⢿⠀⣸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+System.Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠻⣦⣄⣀⣠⣴⠟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+System.Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
             Console.ReadKey();
             Console.Clear();
         }
 
     //Encounters
     public static void Boss1() {
+        int db = 1;
             Print("As you approach you quickly realize you were right to come here.\n" +
-            "The thing you saw is Android 13! The muscle bound menace with a baseball cap made by the evil Dr.Gero!");
+            "The thing you saw is Android 13! The muscle bound, yet polite menace with a baseball cap made by the evil Dr.Gero!");
             Console.ReadKey();
             Print("You square your jaw and set your gaze directly at Android 13. Daring him to take you on!");
             Console.ReadKey();
             Combat(false,"Android 13", 4, 8);
+            ProgramUI.currentPlayer.dragonball += db;
             Console.ReadKey();
-            //boss defeat text
+            Print("\"AGGHH\" Android 13 exclaims as you deliver the final blow squarely on his polite visage!");
+             Console.ReadKey();
+             Print("As he sputters the last of his motor oil and begins to boot down he asks, \"How? *cough* How could this be?\"");
+            Console.ReadKey();
+            Print("\"Because don't you know, Jeeves, that politeness doesn't equal rightness...");
+            Console.ReadKey();
+            Print("After an awkward and uncomfortable pause Android 13 replies,\"Bah Dum CHSH...\"");
+            Console.ReadKey();
+            Print("\"Hey\" you shout back \"It sounded a lot better in my head, ok?!");
+            Console.ReadKey();
+            Console.Clear();
+            Print("Ego slightly dampened you gather your things and continue on down the road to the next area.");
+            Console.ReadKey();
+            Console.Clear();
+            Print("You found a DRAGON BALL!!!");
+System.Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣤⣤⣤⣤⣀⡀⠀⠀⠀⠀⠀⠀⠀");
+System.Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣴⠾⠛⠉⠉⠁⠈⠉⠉⠛⠷⣦⣀⠀⠀⠀⠀");
+System.Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣼⠟⠁⠀⠀⠀⠀⢰⣿⣿⣿⣿⣶⣌⠻⣧⡀⠀⠀");
+System.Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣾⠃⠀⠀⠀⠀⠀⠀⠀⠉⠙⢿⣿⣿⣿⣧⠘⣷⡀⠀");
+System.Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⡇⠀⠀⠀⠀⠀⠀⠀⣸⣆⠀⠀⢻⣿⣿⣿⡀⢸⣇⠀");
+System.Console.WriteLine("⠀⣀⣀⣀⠀⠀⠀⠀⠀⣿⡇⠀⠀⠀⠀⠀⠈⣻⣿⣿⣟⠁⠈⣿⣿⣿⠃⢸⣿⠀");
+System.Console.WriteLine("⠀⠉⠉⠙⠻⢶⣄⠀⠀⢸⡇⠀⠀⠀⠀⠀⠈⠉⢻⡟⠉⠀⠀⢿⣿⠟⠀⢸⡏⠀");
+System.Console.WriteLine("⠀⢰⣿⣿⣦⡀⢻⣆⠀⠀⢿⡄⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⢠⡿⠁⠀");
+System.Console.WriteLine("⠀⠀⠀⢹⣿⣷⠀⣿⡀⠀⠈⠻⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⠟⠁⠀⠀");
+System.Console.WriteLine("⠀⠀⠀⠘⠿⠛⢀⣿⠀⠀⠀⠀⠈⠻⢶⣤⣀⣀⣀⣀⣀⣠⣤⡶⠟⠁⠀⠀⠀⠀");
+System.Console.WriteLine("⠀⠀⠀⠀⠀⣠⡾⠃⠀⣠⣴⣶⣦⣄⠀⠀⠉⠉⠛⠛⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀");
+System.Console.WriteLine("⠀⣤⣴⡶⠟⠋⠀⢀⣾⠋⠀⢤⣄⠙⣷⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+System.Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⢸⣯⠀⠀⠀⢿⠀⣸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+System.Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠻⣦⣄⣀⣠⣴⠟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+System.Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
             Console.ReadKey();
             Console.Clear();
         }
@@ -78,6 +129,8 @@ public class Encounters
         //     Console.ReadKey();
         // }
         public static void Boss4() {
+            int db = 1;
+            Console.Clear();
             Print("While reflecting on the past adventures for the day you find a nice shaded tree and set down for a brief rest.");
             Console.ReadKey();
             Print("You close your eyes and slowly drift off. You think to yourself, \"I wonder how much longer it will be before I\n" +
@@ -106,17 +159,19 @@ public class Encounters
             Console.ReadKey();
             Print("As the dust settles you land in the crater made by this monster.");
             Console.ReadKey();
-            Print("The battlefield is set");
+            Print("The battlefield is set.");
+            Console.Clear();
             Console.ReadKey();
-            Print("You roll up your sleeves");
+            Print("You roll up your sleeves.");
             Console.ReadKey();
-            Print("Pump both fists");
+            Print("Pump both fists.");
             Console.ReadKey();
             Print("And plant your feet.");
             Console.ReadKey();
             Print("Staring down Dr.Gero in the eye. You're ready. And he's about to regret waking you up.");
             Console.ReadKey();
-            Combat(false, "Dr.Gero / Android 20", 27, 16); //name, attack value, health.
+            Combat(false, "Dr.Gero / Android 20", 27, 16);
+            ProgramUI.currentPlayer.dragonball += db;
             Console.Clear();
             Print("At the center of the android-made crater lays Dr.Gero.");
             Console.ReadKey();
@@ -131,32 +186,104 @@ public class Encounters
             Console.ReadKey();
             Print("\"IN ONE DAY!\"");
             Console.ReadKey();
+            Console.Clear();
+            Print("You found a DRAGON BALL!!!");
+System.Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣤⣤⣤⣤⣀⡀⠀⠀⠀⠀⠀⠀⠀");
+System.Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣴⠾⠛⠉⠉⠁⠈⠉⠉⠛⠷⣦⣀⠀⠀⠀⠀");
+System.Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣼⠟⠁⠀⠀⠀⠀⢰⣿⣿⣿⣿⣶⣌⠻⣧⡀⠀⠀");
+System.Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣾⠃⠀⠀⠀⠀⠀⠀⠀⠉⠙⢿⣿⣿⣿⣧⠘⣷⡀⠀");
+System.Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⡇⠀⠀⠀⠀⠀⠀⠀⣸⣆⠀⠀⢻⣿⣿⣿⡀⢸⣇⠀");
+System.Console.WriteLine("⠀⣀⣀⣀⠀⠀⠀⠀⠀⣿⡇⠀⠀⠀⠀⠀⠈⣻⣿⣿⣟⠁⠈⣿⣿⣿⠃⢸⣿⠀");
+System.Console.WriteLine("⠀⠉⠉⠙⠻⢶⣄⠀⠀⢸⡇⠀⠀⠀⠀⠀⠈⠉⢻⡟⠉⠀⠀⢿⣿⠟⠀⢸⡏⠀");
+System.Console.WriteLine("⠀⢰⣿⣿⣦⡀⢻⣆⠀⠀⢿⡄⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⢠⡿⠁⠀");
+System.Console.WriteLine("⠀⠀⠀⢹⣿⣷⠀⣿⡀⠀⠈⠻⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⠟⠁⠀⠀");
+System.Console.WriteLine("⠀⠀⠀⠘⠿⠛⢀⣿⠀⠀⠀⠀⠈⠻⢶⣤⣀⣀⣀⣀⣀⣠⣤⡶⠟⠁⠀⠀⠀⠀");
+System.Console.WriteLine("⠀⠀⠀⠀⠀⣠⡾⠃⠀⣠⣴⣶⣦⣄⠀⠀⠉⠉⠛⠛⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀");
+System.Console.WriteLine("⠀⣤⣴⡶⠟⠋⠀⢀⣾⠋⠀⢤⣄⠙⣷⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+System.Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⢸⣯⠀⠀⠀⢿⠀⣸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+System.Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠻⣦⣄⣀⣠⣴⠟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+System.Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+            Console.ReadKey();
+            Console.Clear();
             Print("Wincing from the effort of yelling you limp up and out of the crater. Heading for your next target.");
             Console.ReadKey();
+            Console.Clear();
 }
         
         
         public static void FinalBoss() {
+            int db = 2;
+            Console.Clear();
             Print("You hear a sonic boom. Look up and see something moving like a fall star towards you.");
             Console.ReadKey();
             Print("It lands with a crash directly in front of you kicking up dust and debris from the impact.");
             Console.ReadKey();
-            Print("After the haze settles a figure emerges and calls to you. \"So\" he says in a cocky voice, \"you really think that you can" + 
-            "take my ballz just like that eh?!\"");
+            Print("After the haze settles a figure emerges and calls to you. \"So,\" he says in a cocky voice, \"you really think that you can \n" + 
+            "take my ballz just like that, eh?!\"");
             Console.ReadKey();
-            Print("This is it. This is the last boss. This is serious stuff and you shouldn't...too late. You bust out laughing at Vegeta's Expense.");
+            Console.Clear();
+System.Console.WriteLine("⣿⣽⡁⠈⢻⣿⣯⢹⣿⣿⣿⣿⡏⣹⣿⠿⣿⣿⣿⡅⢻⣿⣿⣿⣿⣿⠉⣿⣿⣿⡏⠁⣽⣿⣿⣿⣿⠟⣡⣿⣿⣿⣿⢿⣿⣿⣿⣿⣿⠋");
+System.Console.WriteLine("⠘⣿⡇⢠⠘⣿⣿⣿⣿⣿⣿⠿⠋⠁⠀⠀⠙⣿⣿⡇⢸⣿⣿⣿⣿⡏⣸⣿⣿⣿⠀⣸⣿⣿⣿⣿⠗⠚⠛⠻⢿⣿⣳⣿⣿⣿⣿⣿⠃⠀");
+System.Console.WriteLine("⡆⠘⣿⢸⡄⢻⣿⣿⣿⡟⠁⠀⠀⠀⠀⠀⠀⠈⢿⣇⢸⣿⣿⢿⣿⣁⣿⣿⣿⠇⢀⣿⣿⡿⠋⠀⠀⠀⠀⠀⠀⠙⠻⣿⣿⣿⣿⠏⠀⣼");
+System.Console.WriteLine("⣇⢸⡹⡞⣿⡀⣿⣽⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢿⣼⣿⣿⢸⣿⣿⣿⣿⡟⠀⣾⣿⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣿⠏⠀⣼⣿");
+System.Console.WriteLine("⢹⡆⢧⠁⣿⣧⠸⡏⢠⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢿⣿⡏⢸⣿⣿⣿⣿⡇⣸⡿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⠀⣸⣿⣿");
+System.Console.WriteLine("⣄⢷⠘⣆⣸⣿⣆⡇⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢿⡇⠸⣿⣿⣿⣿⡴⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣴⣿⣿⠟");
+System.Console.WriteLine("⣯⣿⣇⣸⠉⢻⣿⣷⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣷⠀⣿⣿⣿⠟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡜⠀⠀⢸⣿⡿⢋⣾");
+System.Console.WriteLine("⣝⢿⣿⡏⣾⣦⣻⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⡤⣿⣿⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⡇⠀⠀⣾⢟⣴⣿⣿");
+System.Console.WriteLine("⣟⣧⡙⣷⠏⣠⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣿⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣄⣴⣶⣳⣿⣿⢟⣩");
+System.Console.WriteLine("⠈⢿⣿⣿⢸⡋⠙⢦⣄⠀⠀⠀⠀⠀⠀⠀⠀⣀⠀⠀⠀⠀⠀⠀⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⣿⣿⡿⢋⡕⠻⣄");
+System.Console.WriteLine("⠀⠀⠹⣿⡄⢳⠉⣽⢿⠙⢲⣄⡀⠀⠀⠀⠀⠈⠳⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⠤⠀⠀⠀⠀⠀⠀⠀⠀⢀⣿⣿⠏⢠⠋⠉⡷⠀");
+System.Console.WriteLine("⠀⠀⠀⠈⢻⣄⠙⢿⣿⡇⠀⣧⠉⠲⢄⡀⠀⠀⠀⠈⠻⣄⠀⠀⠀⠀⢀⣠⣶⠞⠋⠀⠀⠀⠀⠀⠀⢀⣀⣠⠤⠞⢠⠋⢀⣈⣉⣠⠃⢀");
+System.Console.WriteLine("⠉⠛⠿⣿⣿⣿⣷⣄⠀⢻⠀⠘⣆⠀⠀⢿⠲⣄⡀⠀⠀⠈⠢⡀⣀⡴⠟⠋⠀⠀⠀⠀⢀⣀⣤⠖⠋⣹⠏⠀⠀⢠⠏⣀⣯⢤⣴⡃⢀⣾");
+System.Console.WriteLine("⠀⠀⠀⡀⣉⣳⣯⡟⢷⣬⣧⠄⣈⣙⠲⠤⣱⣽⣛⣲⣄⠀⠀⣿⡇⠀⠀⠀⣀⣤⣴⣾⣯⣛⣁⠤⠞⠁⠀⠀⢠⡟⠛⠛⡷⠋⢀⣼⡋⠛");
+System.Console.WriteLine("⠀⠀⠈⠉⠛⠛⠛⠿⢿⣟⣻⡄⠀⠈⠉⠛⠻⢾⣭⣛⠲⠛⠚⠛⠛⠒⠒⠛⠒⣋⣉⣭⣅⣤⠶⠶⠖⠒⠂⢀⡟⢀⣠⣴⣟⠚⢻⡻⠿⢷");
+System.Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣨⣷⠀⠀⠀⠀⠀⠀⠀⠉⠉⠛⢦⠀⠀⠀⠈⠉⠉⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⡜⠋⠉⢻⡿⣿⣷⣦⣽⣦⡀");
+System.Console.WriteLine("⠀⠀⠀⠀⠀⢀⣠⣴⣶⡾⢫⡏⣇⠀⠀⠀⠀⠀⠀⠀⠀⢀⣾⠀⠀⠀⠀⠀⠀⠀⢀⡀⠀⠀⠀⠀⠀⠀⡜⡠⠀⠀⠀⢳⣀⠉⠛⠿⣟⡻");
+System.Console.WriteLine("⠀⠀⢀⣤⣖⣫⣽⣿⢋⣠⣾⡇⠘⢦⣀⠀⠀⠀⠀⣀⠀⢮⣸⠀⣀⠀⠀⠀⠀⢘⣿⠃⠀⠀⠀⠀⢀⡞⡵⠁⠀⠀⣀⣴⣿⣷⣦⡀⢀⡽");
+System.Console.WriteLine("⣠⣾⡿⠛⠉⣸⣿⣿⣿⣿⣿⡇⠀⠸⡿⣄⠀⠀⠀⠙⣦⣤⣽⣟⣥⢤⣤⣴⣶⡿⠁⠀⠀⠀⢀⡴⢋⡞⠁⣀⣴⣿⣿⣿⣿⣿⣿⡿⠋⠀");
+System.Console.WriteLine("⠏⠁⠀⣀⣤⣏⣿⣿⣿⣿⣿⣷⣄⡀⠹⡌⠳⣄⠀⠀⠈⠙⠓⠒⠒⠚⠛⠋⠉⠀⢠⡀⢀⡴⠟⢠⣮⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⠤⣄⡀");
+System.Console.WriteLine("⣴⠶⠟⠋⣹⢻⣿⣿⣿⣿⣿⣿⣿⣿⣦⣹⣄⠘⠳⣄⠀⠀⠀⠈⠉⠉⠁⠀⠀⠀⣸⠿⠋⣀⣴⠏⣵⣿⣿⣿⣿⣿⣿⣿⠟⠁⠈⠉⠒⠿");
+System.Console.WriteLine("⠁⢀⣠⣤⣿⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡻⣶⣤⣬⣷⣄⡀⠀⠀⠀⠀⣠⡴⣞⣡⣴⣾⣿⠏⣼⣿⣿⣿⣿⣿⣿⡿⣷⣤⣄⣀⠀⠀⠀");
+System.Console.WriteLine("⠿⠛⠉⢁⣧⠼⠿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣜⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣯⣾⣿⣿⣿⣿⣿⡿⠋⠀⠀⠈⠙⠛⠯⣖⡦");
+System.Console.WriteLine("⠔⠒⢹⡁⠀⠀⠀⠈⠈⠻⣷⡀⠀⠀⠉⠙⠛⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠿⠿⠿⠿⠟⠛⣻⣿⠟⠛⠛⠓⠒⠦⠤⣤⣀⣀⠀⠀⡽");
+System.Console.WriteLine("⣀⣤⡴⠚⠉⠉⢻⡆⠀⠀⢿⣿⣿⣿⣷⣶⣶⣤⣌⠻⣿⣿⣿⡿⠛⢋⣉⣀⣀⣤⣤⣤⣤⣤⡾⣏⣀⣠⠤⠤⠤⣄⣀⣀⠚⢋⠈⠉⠙⠳");
+
             Console.ReadKey();
-            Print("Face turing red after the realization hits him, Vegeta yells back,\"HEY! Stop it! I will be taken seriously!!");
+            System.Console.WriteLine();
+            Print("This is it. This is the last boss. This is serious stuff and you shouldn't... too late. You bust out laughing at Vegeta's Expense.");
+            Console.ReadKey();
+            Print("Face turing red after the realization hits him, Vegeta yells back, \"HEY! Stop it! I will be taken seriously!!");
             Console.ReadKey();
             Print("\"Mmmhmm. Sure I'm taking this very seriously.\" you reply in between fits of laughter.");
             Console.ReadKey();
             Print("\"Enough! Lets finish this so that you can be taught some proper respect!\"");
             Console.ReadKey();
             Print("Wiping the tears from your eyes and ignoring the stitch in your side you square up and turn to face your final challenge.");
-            Combat(false, "Vegeta", 135, 128); //name, attack value, health.
-            Print("Vegeta being defeated you glance to the sky and see a majestic dragon.");
+            Combat(false, "Vegeta", 135, 128);
+            ProgramUI.currentPlayer.dragonball += db;
+            Print("\"NOOOOOOOO! Not my PRECIOUS DRAGON BAlLzZzZzz....\"");
             Console.ReadKey();
-            Print("\"Greetings TJ! You have collected all of my ballz. As your reward for handling them with care and honor," + 
+            Console.Clear();
+            Print("You found a DRAGON BALL!!!");
+System.Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣤⣤⣤⣤⣀⡀⠀⠀⠀⠀⠀⠀⠀");
+System.Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣴⠾⠛⠉⠉⠁⠈⠉⠉⠛⠷⣦⣀⠀⠀⠀⠀");
+System.Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣼⠟⠁⠀⠀⠀⠀⢰⣿⣿⣿⣿⣶⣌⠻⣧⡀⠀⠀");
+System.Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣾⠃⠀⠀⠀⠀⠀⠀⠀⠉⠙⢿⣿⣿⣿⣧⠘⣷⡀⠀");
+System.Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⡇⠀⠀⠀⠀⠀⠀⠀⣸⣆⠀⠀⢻⣿⣿⣿⡀⢸⣇⠀");
+System.Console.WriteLine("⠀⣀⣀⣀⠀⠀⠀⠀⠀⣿⡇⠀⠀⠀⠀⠀⠈⣻⣿⣿⣟⠁⠈⣿⣿⣿⠃⢸⣿⠀");
+System.Console.WriteLine("⠀⠉⠉⠙⠻⢶⣄⠀⠀⢸⡇⠀⠀⠀⠀⠀⠈⠉⢻⡟⠉⠀⠀⢿⣿⠟⠀⢸⡏⠀");
+System.Console.WriteLine("⠀⢰⣿⣿⣦⡀⢻⣆⠀⠀⢿⡄⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⢠⡿⠁⠀");
+System.Console.WriteLine("⠀⠀⠀⢹⣿⣷⠀⣿⡀⠀⠈⠻⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⠟⠁⠀⠀");
+System.Console.WriteLine("⠀⠀⠀⠘⠿⠛⢀⣿⠀⠀⠀⠀⠈⠻⢶⣤⣀⣀⣀⣀⣀⣠⣤⡶⠟⠁⠀⠀⠀⠀");
+System.Console.WriteLine("⠀⠀⠀⠀⠀⣠⡾⠃⠀⣠⣴⣶⣦⣄⠀⠀⠉⠉⠛⠛⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀");
+System.Console.WriteLine("⠀⣤⣴⡶⠟⠋⠀⢀⣾⠋⠀⢤⣄⠙⣷⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+System.Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⢸⣯⠀⠀⠀⢿⠀⣸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+System.Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠻⣦⣄⣀⣠⣴⠟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+System.Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+            Console.ReadKey();
+            Print(" With Vegeta being defeated you glance to the sky and see a majestic dragon.");
+            Console.ReadKey();
+            Print("\"Greetings TJ! You have collected all of my ballz. As your reward for handling them with care and honor, \n" + 
             "I bestow but one wish. An all powerful wish that can grant you anything you desire.\"");
             Console.ReadKey();
             Print("\"Now then, what shall it be?!\"");
@@ -168,6 +295,20 @@ public class Encounters
             } else if (rand.Next() * 100 <= 99) {
             Print($"\"As you wish, weirdo!\"");
             }
+            Console.ReadKey();
+            Console.Clear();
+            ProgramUI.Print("Thank you for playing");
+            System.Console.WriteLine();
+System.Console.WriteLine("     _                             _           _ _    _______  _______");
+System.Console.WriteLine("    | |                           | |         | | |  |__   __||__   __|");
+System.Console.WriteLine("  __| |_ __ __ _  __ _  ___  _ __ | |__   __ _| | |     | |      | |");
+System.Console.WriteLine(" / _` | '__/ _` |/ _` |/ _ `| '_ `| '_ ` / _` | | |     | |      | |");
+System.Console.WriteLine("| (_| | | | (_| | (_| | (_) | | | | |_) | (_| | | |     | |   ___/ /");
+System.Console.WriteLine(" `_,__|_|  `__,_|`__` |`___/|_| |_|_.__/ `__,_|_|_|     |_|  `____/");
+System.Console.WriteLine("                  __/ /");
+System.Console.WriteLine("                 `___/");
+            System.Console.WriteLine();
+            ProgramUI.Print("Created by: Mary Beeson and Jalen Waggoner");
         }
 
         
@@ -185,7 +326,24 @@ public class Encounters
                 string selection = Console.ReadLine();
 
                 if (selection == "1") {
-                    Print("You found a flippin' Dragon Ball! Wow!");
+                    Console.Clear();
+                    Print("You found a DRAGON BALL!!!");
+System.Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣤⣤⣤⣤⣀⡀⠀⠀⠀⠀⠀⠀⠀");
+System.Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣴⠾⠛⠉⠉⠁⠈⠉⠉⠛⠷⣦⣀⠀⠀⠀⠀");
+System.Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣼⠟⠁⠀⠀⠀⠀⢰⣿⣿⣿⣿⣶⣌⠻⣧⡀⠀⠀");
+System.Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣾⠃⠀⠀⠀⠀⠀⠀⠀⠉⠙⢿⣿⣿⣿⣧⠘⣷⡀⠀");
+System.Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⡇⠀⠀⠀⠀⠀⠀⠀⣸⣆⠀⠀⢻⣿⣿⣿⡀⢸⣇⠀");
+System.Console.WriteLine("⠀⣀⣀⣀⠀⠀⠀⠀⠀⣿⡇⠀⠀⠀⠀⠀⠈⣻⣿⣿⣟⠁⠈⣿⣿⣿⠃⢸⣿⠀");
+System.Console.WriteLine("⠀⠉⠉⠙⠻⢶⣄⠀⠀⢸⡇⠀⠀⠀⠀⠀⠈⠉⢻⡟⠉⠀⠀⢿⣿⠟⠀⢸⡏⠀");
+System.Console.WriteLine("⠀⢰⣿⣿⣦⡀⢻⣆⠀⠀⢿⡄⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⢠⡿⠁⠀");
+System.Console.WriteLine("⠀⠀⠀⢹⣿⣷⠀⣿⡀⠀⠈⠻⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⠟⠁⠀⠀");
+System.Console.WriteLine("⠀⠀⠀⠘⠿⠛⢀⣿⠀⠀⠀⠀⠈⠻⢶⣤⣀⣀⣀⣀⣀⣠⣤⡶⠟⠁⠀⠀⠀⠀");
+System.Console.WriteLine("⠀⠀⠀⠀⠀⣠⡾⠃⠀⣠⣴⣶⣦⣄⠀⠀⠉⠉⠛⠛⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀");
+System.Console.WriteLine("⠀⣤⣴⡶⠟⠋⠀⢀⣾⠋⠀⢤⣄⠙⣷⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+System.Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⢸⣯⠀⠀⠀⢿⠀⣸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+System.Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠻⣦⣄⣀⣠⣴⠟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+System.Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+            Console.ReadKey();
                     ProgramUI.currentPlayer.dragonball += db;
                     selectionNeeded = false;
                 } else if (selection == "2") {
@@ -211,18 +369,20 @@ public class Encounters
                 if (selection == "1") {
                     Print("As you approach, the shouting gets louder.\n" +
                     "You see the sign above the door that reads \"Lao's Emporium\" and think \"This can't be so bad\"...");
+                    Console.ReadKey();
                     Shop.LoadShop(ProgramUI.currentPlayer);
                     selectionNeeded = false;
                 }
                 else if (selection == "2") {
                     Print("You shake your head, \"No way I'm going there!\", and sulk as you make your way to a nearby lake\n" +
                     "\"Surely I should find it relaxing by the water.\"");
+                    Console.ReadKey();
                     selectionNeeded = false;
                 }
             }
         }
 
-        public static void QuietLake() {
+        /*public static void QuietLake() {
             bool selectionNeeded = true;
             int db = 1;
 
@@ -241,9 +401,9 @@ public class Encounters
                     selectionNeeded = false;
                 }
             }
-        }
+        }*/
 
-        public static void Forest() {
+        /*public static void Forest() {
             bool selectionNeeded = true;
             int db = 1;
 
@@ -262,9 +422,9 @@ public class Encounters
                     selectionNeeded = false;
                 }
             }
-        }
+        }*/
 
-        public static void MountainBase() {
+        /*public static void MountainBase() {
             bool selectionNeeded = true;
             int db = 1;
 
@@ -283,28 +443,28 @@ public class Encounters
                     selectionNeeded = false;
                 }
             }
-        }
+        }*/
 
-        public static void Temple() {
-            bool selectionNeeded = true;
-            int db = 1;
+        // public static void Temple() {
+        //     bool selectionNeeded = true;
+        //     int db = 1;
 
-            while (selectionNeeded) {
+        //     while (selectionNeeded) {
 
-            //Selections here
+        //     //Selections here
 
-            string selection = Console.ReadLine();
+        //     string selection = Console.ReadLine();
 
-            if (selection == "1") {
-                    Print("You found a flippin' Dragon Ball! Wow!");
-                    ProgramUI.currentPlayer.dragonball += db;
-                    selectionNeeded = false;
-                } else if (selection == "2") {
-                    Print("You walk away,"); // leaving text
-                    selectionNeeded = false;
-                }
-            }
-        }
+        //     if (selection == "1") {
+        //             Print("You found a flippin' Dragon Ball! Wow!");
+        //             ProgramUI.currentPlayer.dragonball += db;
+        //             selectionNeeded = false;
+        //         } else if (selection == "2") {
+        //             Print("You walk away,"); // leaving text
+        //             selectionNeeded = false;
+        //         }
+        //     }
+        // }
 
         // win encounter/ end credits?
         

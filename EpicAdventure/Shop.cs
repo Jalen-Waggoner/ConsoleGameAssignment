@@ -74,9 +74,9 @@ using System;
             else if (input == "e" || input == "exit"){
                 Console.Clear();
                 Print("\"THANKS FOR STOPPING BY! BE SURE TO COME BACK NOW YOU HEAR!?\"");
-                Console.ReadLine();
+                Console.ReadKey();
                 Print("You lightly chuckle to yourself at the irony of Mr.Lao's last statement, loudly thank him for his services, and exit the shop.");
-                Console.ReadLine();
+                Console.ReadKey();
                 break;
             }
             static void TryBuy(string item, int cost, TJ tj){

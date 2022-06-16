@@ -10,12 +10,14 @@ public class ProgramUI {
     
     public void Run(){
         while(currentPlayer.health > 0){
-        // RunMenu();
+        RunMenu();
         Encounters.Boss1();
-        //Area 1
+        Encounters.Valley();
+        Encounters.RandomEncounter();
         Encounters.Emporium();
         Encounters.Boss4();
-        //Area 2 
+        Area.Area1();
+        Encounters.RandomEncounter();
         Encounters.Emporium();
         Encounters.FinalBoss();
         }
@@ -26,90 +28,98 @@ public class ProgramUI {
 
 
 
-        Encounters.RandomEncounter();
+    //     Encounters.RandomEncounter();
         
-        while(continueToRun){
-        Encounters.Boss1();
-            if (ProgramUI.currentPlayer.health <= 0)
-            continueToRun = false;
+    //     while(continueToRun){
+    //     Encounters.Boss1();
+    //         if (ProgramUI.currentPlayer.health <= 0)
+    //         continueToRun = false;
 
-        Encounters.Valley(); // has dragonball
-            if (ProgramUI.currentPlayer.health <= 0)
-            continueToRun = false;
-        RunMenu();
+    //     Encounters.Valley(); // has dragonball
+    //         if (ProgramUI.currentPlayer.health <= 0)
+    //         continueToRun = false;
+    //     RunMenu();
 
-        Encounters.RandomEncounter();
-            if (ProgramUI.currentPlayer.health <= 0)
-            continueToRun = false;
+    //     Encounters.RandomEncounter();
+    //         if (ProgramUI.currentPlayer.health <= 0)
+    //         continueToRun = false;
 
-        Encounters.Emporium();
-            if (ProgramUI.currentPlayer.health <= 0)
-            continueToRun = false;
+    //     Encounters.Emporium();
+    //         if (ProgramUI.currentPlayer.health <= 0)
+    //         continueToRun = false;
 
-        Encounters.QuietLake(); 
-            if (ProgramUI.currentPlayer.health <= 0)
-            continueToRun = false;
+    //     Encounters.QuietLake(); 
+    //         if (ProgramUI.currentPlayer.health <= 0)
+    //         continueToRun = false;
 
-        Encounters.RandomEncounter();
-            if (ProgramUI.currentPlayer.health <= 0)
-            continueToRun = false;
+    //     Encounters.RandomEncounter();
+    //         if (ProgramUI.currentPlayer.health <= 0)
+    //         continueToRun = false;
 
-        Encounters.Emporium();
-            if (ProgramUI.currentPlayer.health <= 0)
-            continueToRun = false;
+    //     Encounters.Emporium();
+    //         if (ProgramUI.currentPlayer.health <= 0)
+    //         continueToRun = false;
 
-        Encounters.Forest(); 
-            if (ProgramUI.currentPlayer.health <= 0)
-            continueToRun = false;
+    //     Encounters.Forest(); 
+    //         if (ProgramUI.currentPlayer.health <= 0)
+    //         continueToRun = false;
 
-        Encounters.RandomEncounter();
-            if (ProgramUI.currentPlayer.health <= 0)
-            continueToRun = false;
+    //     Encounters.RandomEncounter();
+    //         if (ProgramUI.currentPlayer.health <= 0)
+    //         continueToRun = false;
 
-        Encounters.Emporium();
-            if (ProgramUI.currentPlayer.health <= 0)
-            continueToRun = false;
+    //     Encounters.Emporium();
+    //         if (ProgramUI.currentPlayer.health <= 0)
+    //         continueToRun = false;
 
 
-        Encounters.MountainBase(); 
-            if (ProgramUI.currentPlayer.health <= 0)
-            continueToRun = false;
+    //     Encounters.MountainBase(); 
+    //         if (ProgramUI.currentPlayer.health <= 0)
+    //         continueToRun = false;
         
-        Encounters.RandomEncounter();
-            if (ProgramUI.currentPlayer.health <= 0)
-            continueToRun = false;
+    //     Encounters.RandomEncounter();
+    //         if (ProgramUI.currentPlayer.health <= 0)
+    //         continueToRun = false;
 
-        Encounters.Emporium();
-            if (ProgramUI.currentPlayer.health <= 0)
-            continueToRun = false;
+    //     Encounters.Emporium();
+    //         if (ProgramUI.currentPlayer.health <= 0)
+    //         continueToRun = false;
 
-        Encounters.Boss4();
-            if (ProgramUI.currentPlayer.health <= 0)
-            continueToRun = false;
+    //     Encounters.Boss4();
+    //         if (ProgramUI.currentPlayer.health <= 0)
+    //         continueToRun = false;
         
-        Encounters.Temple(); 
-            if (ProgramUI.currentPlayer.health <= 0)
-            continueToRun = false;
+    //     Encounters.Temple(); 
+    //         if (ProgramUI.currentPlayer.health <= 0)
+    //         continueToRun = false;
 
-        Encounters.RandomEncounter();
-            if (ProgramUI.currentPlayer.health <= 0)
-            continueToRun = false;
+    //     Encounters.RandomEncounter();
+    //         if (ProgramUI.currentPlayer.health <= 0)
+    //         continueToRun = false;
 
-        Encounters.Emporium();
-            if (ProgramUI.currentPlayer.health <= 0)
-            continueToRun = false;
+    //     Encounters.Emporium();
+    //         if (ProgramUI.currentPlayer.health <= 0)
+    //         continueToRun = false;
 
-        Encounters.FinalBoss();}
-            if (ProgramUI.currentPlayer.health <= 0)
-            continueToRun = false;
+    //     Encounters.FinalBoss();}
+    //         if (ProgramUI.currentPlayer.health <= 0)
+    //         continueToRun = false;
 
-            //Win encounter
-    }
+    //         //Win encounter
+     }
 
     public void RunMenu() {
     bool selectionNeeded = true;
 
     Console.Clear();
+System.Console.WriteLine("     _                             _           _ _    _______  _______");
+System.Console.WriteLine("    | |                           | |         | | |  |__   __||__   __|");
+System.Console.WriteLine("  __| |_ __ __ _  __ _  ___  _ __ | |__   __ _| | |     | |      | |");
+System.Console.WriteLine(" / _` | '__/ _` |/ _` |/ _ `| '_ `| '_ ` / _` | | |     | |      | |");
+System.Console.WriteLine("| (_| | | | (_| | (_| | (_) | | | | |_) | (_| | | |     | |   ___/ /");
+System.Console.WriteLine(" `_,__|_|  `__,_|`__` |`___/|_| |_|_.__/ `__,_|_|_|     |_|  `____/");
+System.Console.WriteLine("                  __/ /");
+System.Console.WriteLine("                 `___/");
     Print("---------------Welcome to DragonBall TJ---------------\n" +
     "Press any key to embark on this tale for the ages!", 60);
     Console.ReadKey();
@@ -117,6 +127,7 @@ public class ProgramUI {
     Print("You, TJ, the most powerful Sayain on the Dragon World,\n" +
     "have been sent by Master Marco to traverse these lands in search for the 7 Dragon Balls.\n" +
     "Youre not quite sure where to find them, or what they even do, but Master Marco made it seem urgent.\n" +
+    "Before embarking on your quest, Master Marco gifted you his entire life savings to help you on your way!\n" +
     "You've had no luck this far, until one day...");
     Console.ReadKey();
     Console.Clear();
