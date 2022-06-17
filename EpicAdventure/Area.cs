@@ -23,7 +23,7 @@ public class Area {
                     bool case1ContinueToRun = true;
                     
                     while(case1ContinueToRun){
-                        int jumpSuccess = rand.Next(1, 100);
+                        int jumpFail = rand.Next(1, 100);
                         Console.Clear();
                         ProgramUI.Print("You travel for about an hour until you come to a river with a dilapidated bridge.\n" +
                         "Do you try and cross it?\n" +
@@ -32,7 +32,7 @@ public class Area {
                         string caseInput1 = Console.ReadLine();
                         
                         if(caseInput1 == "1"){
-                            if (jumpSuccess <= 100){
+                            if (jumpFail <= 75){
                                 Console.Clear();
                                 ProgramUI.Print("You only make it half way across when one of the wooden planks falls out from under you... \n" +
                                 "You plummet to your doom and never found again!");
@@ -168,7 +168,7 @@ public class Area {
                                 Console.ReadKey();
                                 ProgramUI.Print("Ok. Fine. You can certainly do that but you've just increased the difficulty by 5x!!!");
                                 Console.ReadKey();
-                                ProgramUI.Print("You fool! You thought you could skip through content unnoticed! THINK AGAIN SIR/MADAM!");
+                                ProgramUI.Print("You fool! You thought you could skip through content unnoticed! THINK AGAIN SIR!");
                                 Console.ReadKey();
                                 ProgramUI.Print("MWHAHAHAHAHAHAHA!!!");
                                 Console.ReadKey();

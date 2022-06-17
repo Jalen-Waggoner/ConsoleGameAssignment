@@ -50,9 +50,8 @@ System.Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠉⠀⠀⠀⠀⠀
             Console.ReadKey();
             Combat(false,"Android 13", 4, 8);
             ProgramUI.currentPlayer.dragonball += db;
-            Console.ReadKey();
             Print("\"AGGHH\" Android 13 exclaims as you deliver the final blow squarely on his polite visage!");
-             Console.ReadKey();
+            Console.ReadKey();
              Print("As he sputters the last of his motor oil and begins to boot down he asks, \"How? *cough* How could this be?\"");
             Console.ReadKey();
             Print("\"Because don't you know, Jeeves, that politeness doesn't equal rightness...");
@@ -309,6 +308,7 @@ System.Console.WriteLine("                  __/ /");
 System.Console.WriteLine("                 `___/");
             System.Console.WriteLine();
             ProgramUI.Print("Created by: Mary Beeson and Jalen Waggoner");
+            Console.ReadKey();
         }
 
         
@@ -565,6 +565,7 @@ System.Console.WriteLine("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠉⠀⠀⠀⠀⠀
                     Console.ReadKey();
                 }
             Console.ReadKey();
+            Console.Clear();
 
             // DEATH
             if (ProgramUI.currentPlayer.health <= 0){
